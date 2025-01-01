@@ -61,14 +61,9 @@ ignoreErrors = ["additional-script-loading-error"] # ignore error of loading add
     weight = 10
   [[Languages.en-gb.menu.main]]
     pageRef="posts"
-    name = 'Posts'
+    name = 'Blog'
     url = '/posts/'
     weight = 20
-  [[Languages.en-gb.menu.main]]
-    pageRef="about"
-    name = 'About'
-    url = '/about/'
-    weight = 30
 
 [Languages.en-gb.params]
   sitename = "Oliver Mitchell"
@@ -78,7 +73,7 @@ ignoreErrors = ["additional-script-loading-error"] # ignore error of loading add
   # You can take a look at layouts/index.html for more information.
   description = ""
   mainSections = ['posts']
-  toc = true # set to false to disable table of contents 'globally'
+  toc = false # set to false to disable table of contents 'globally'
   tocOpen = false # set to true to open table of contents by default
   goToTop = true # set to false to disable 'go to top' button
   additionalScripts = ['js/custom.js', 'js/custom-2.js']
@@ -96,9 +91,13 @@ ignoreErrors = ["additional-script-loading-error"] # ignore error of loading add
 [Languages.en-gb.params.author]
   avatar = "avatar.png" # put the file in assets folder; also ensure that image has same height and width
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
-  intro = "Hi, I'm Oli"
+  intro = "Hey, I'm Oliver"
   name = "Oliver Mitchell"
-  description = "A fullstack software engineer"
+  description = "I'm a fullstack software engineer who enjoys building things with JavaScript and Node.js."
+  description2 = "My main interests include gaming, retro tech, and photography."
+
+[Languages.en-gb.params.blog]
+  description = "My writings on topics ranging from gaming and retro tech, to photography and birding."
 
 # Allow to override webmanifest options
 [Languages.en-gb.params.webmanifest]
