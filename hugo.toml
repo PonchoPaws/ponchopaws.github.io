@@ -97,7 +97,7 @@ ignoreErrors = ["additional-script-loading-error"] # ignore error of loading add
   description2 = "My main interests include gaming, retro tech, and photography."
 
 [Languages.en-gb.params.blog]
-  description = "My writings on topics ranging from gaming and retro tech, to photography and birding."
+  description = "My writings on topics such as gaming, retro technology, photography, and birding."
 
 # Allow to override webmanifest options
 #[Languages.en-gb.params.webmanifest]
