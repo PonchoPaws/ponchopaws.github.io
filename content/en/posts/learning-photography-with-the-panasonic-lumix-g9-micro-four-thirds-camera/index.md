@@ -1,7 +1,7 @@
 +++
 date = '2025-01-01T09:33:58Z'
 draft = false
-title = 'Learning Wildlife Photography with the Panasonic Lumix G9 Micro Four Thirds Camera'
+title = 'Learning Photography with the Panasonic Lumix G9 Micro Four Thirds Camera'
 +++
 
 ![A grey squirrel (Sciurus carolinensis) standing on a lichen covered tree branch, holding a nut.](images/01012025-4.jpg "Grey Squirrel (Sciurus carolinensis)")
