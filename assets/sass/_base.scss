@@ -322,3 +322,25 @@ mark,
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .photo-info-wrapper {
+    flex-direction: column;
+  }
+}
+
+.photo-info-wrapper {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.photo-info-child {
+  flex: 1 1 0px;
+}
+
+.golden-title {
+  background: linear-gradient(to right, darkgoldenrod, darkkhaki) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  color: transparent !important;
+}
