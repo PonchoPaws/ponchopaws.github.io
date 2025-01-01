@@ -41,7 +41,7 @@ My hope for 2025 is that I can continue to improve and share better photos on th
     </div>
 </blockquote>
 
-![A European robin (Erithacus rubecula) pirching on a tree branch.](images/01012025-2.jpg "European robin (Erithacus rubecula)")
+![A European robin (Erithacus rubecula) perching on a tree branch.](images/01012025-2.jpg "European robin (Erithacus rubecula)")
 
 <blockquote>
     <div class="photo-info-wrapper">
