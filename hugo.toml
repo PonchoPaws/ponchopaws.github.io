@@ -93,7 +93,7 @@ ignoreErrors = ["additional-script-loading-error"] # ignore error of loading add
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
   intro = "Hey, I'm Oliver"
   name = "Oliver Mitchell"
-  description = "I'm a fullstack software engineer who enjoys building things with JavaScript and Node.js."
+  description = "I'm a full-stack software engineer who enjoys building things with JavaScript and Node.js."
   description2 = "My main interests include gaming, retro tech, and photography."
 
 [Languages.en-gb.params.blog]
