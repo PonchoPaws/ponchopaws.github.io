@@ -4,13 +4,13 @@ draft = false
 title = 'Learning Photography with the Panasonic Lumix G9 Micro Four Thirds Camera'
 +++
 
-![A grey squirrel (Sciurus carolinensis) standing on a lichen covered tree branch, holding a nut.](images/01012025-4.jpg "Grey Squirrel (Sciurus carolinensis)")
+![Panasonic Leica DG Elmarit 200mm f/2.8 on a desk](images/01012025-5.jpg "Panasonic Leica DG Elmarit 200mm f/2.8 on a desk")
 
 In July last year, my wife and I travelled to Japan on our three week honeymoon. Prior to the holiday I considered purchasing a mirrorless camera so that I could take better photos than my Samsung S23 smartphone could capture. Ultimately, I decided against the purchase as I wanted to pack lightly due to the number of different destinations we'd be moving between. I still managed to take some fantastic photos of Japan, but the thought of a proper camera didn't escape my mind and I ended up purchasing a mirrorless body and a couple of lenses in October.
 
 For me, it was crucial that the camera was lightweight (ideally under a kilogram including the body and lens). I felt that the lighter and smaller the camera, the more likely I would be to easily grab it and take it with me. One of the things I was most looking forward to trying was wildlife photography, particularly birds. I currently live in rural Sussex and there are fantastic woodlands and nature reserves right on my doorstep.
 
-![A Panasonic DC-G9 camera on a wooden park bench.](https://cdn.pixabay.com/photo/2019/08/22/20/11/digital-camera-4424316_1280.jpg "Panasonic DC-G9 camera")
+![Llangollen station.](images/01012025-4.jpg "Llangollen station")
 
 The camera I purchased was a [Lumix DC-G9](https://www.panasonic.com/uk/consumer/cameras-camcorders/lumix-mirrorless-cameras/lumix-g-cameras/dc-g9.html), a mirrorless body produced by Panasonic that uses the Micro Four Thirds (MFT) system mount.
 
@@ -33,7 +33,7 @@ My hope for 2025 is that I can continue to improve and share better photos on th
             ISO 800 | 280mm | f/4.0 | 1/1000s<br>
             Panasonic Lumix DC-G9<br>
             Panasonic Leica DG Elmarit 200mm f/2.8<br>
-            Panasonic Leica DMW-TC14 1.4x Teleconverter<br>
+            Panasonic Lumix DMW-TC14 1.4x Teleconverter<br>
         </p>
         <p class="photo-info-child" style="font-size: 9.5pt;">
             <i>A grey squirrel (Sciurus carolinensis) standing on a lichen covered tree branch, holding a nut.</i>
@@ -64,7 +64,7 @@ My hope for 2025 is that I can continue to improve and share better photos on th
             ISO 1000 | 280mm | f/7.1 | 1/640s<br>
             Panasonic Lumix DC-G9<br>
             Panasonic Leica DG Elmarit 200mm f/2.8<br>
-            Panasonic Leica DMW-TC14 1.4x Teleconverter<br>
+            Panasonic Lumix DMW-TC14 1.4x Teleconverter<br>
         </p>
         <p class="photo-info-child" style="font-size: 9.5pt;">
             <i>A grey seal (Halichoerus grypus) mother and pup resting on a sandy beach.</i>
