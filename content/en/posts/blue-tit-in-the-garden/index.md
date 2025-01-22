@@ -4,7 +4,7 @@ draft = false
 title = 'Blue Tit in the Garden'
 +++
 
-![A blue tit (Cyanistes caeruleus) perched on a garden fence](images/22012025-1.jpg "A blut tit (Cyanistes caeruleus) perched on a garden fence")
+![A blue tit (Cyanistes caeruleus) perched on a garden fence](./202501200948.jpg "A blut tit (Cyanistes caeruleus) perched on a garden fence")
 
 <blockquote>
     <div class="photo-info-wrapper">
