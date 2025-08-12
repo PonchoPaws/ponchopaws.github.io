@@ -4,7 +4,7 @@ draft = false
 title = 'Kestrel at Thurlestone Sands'
 +++
 
-![A kestrel (Falco tinnunculus)](./kestrel-12-08-2025.jpg "A kestrel (Falco tinnunculus)")
+![A kestrel (Falco tinnunculus)](./P1024711.jpg "A kestrel (Falco tinnunculus)")
 
 <blockquote>
     <div class="photo-info-wrapper">
