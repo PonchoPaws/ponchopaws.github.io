@@ -1,5 +1,5 @@
 +++
-date = '2025-08-12T19:00:00Z'
+date = '2025-08-11T00:00:00Z'
 draft = false
 title = 'Thurlestone Sands Kestrel'
 +++
