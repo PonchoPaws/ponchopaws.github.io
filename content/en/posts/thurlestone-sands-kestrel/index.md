@@ -1,7 +1,7 @@
 +++
 date = '2025-08-12T19:00:00Z'
 draft = false
-title = 'Kestrel at Thurlestone Sands'
+title = 'Thurlestone Sands Kestrel'
 +++
 
 ![A kestrel (Falco tinnunculus)](./P1024711.jpg "A kestrel (Falco tinnunculus)")
