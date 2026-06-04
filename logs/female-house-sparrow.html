@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oliver Paul Mitchell | Logs</title>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+      body {
+        padding: 20px;
+      }
+      .hidden {
+        display: none !important;
+      }
+      .published-date {
+        background-color: var(--tertiary-color);
+        color: var(--invert-font-color);
+        padding: 6px 12px 6px 12px;
+        border-radius: 10px;
+        display: inline-block;
+        font-weight: bold;
+      }
+      .grid {
+        display: grid;
+        gap: 20px;
+      }
+      @media screen and (max-width: 767px) {
+        .grid-cols-3 {
+          grid-template-columns: 1fr !important;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        .grid-cols-3 {
+          grid-template-columns: repeat(3, 1fr) !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="terminal-body">
+    <div class="container">
+      <header class="terminal-nav">
+        <div class="terminal-logo">
+          <div class="logo terminal-prompt">
+            <a href="../index.html" class="no-style"
+              >user@oliverpaulmitchell:~</a
+            >
+          </div>
+        </div>
+        <nav class="terminal-menu">
+          <ul>
+            <li><a class="menu-item" href="../../index.html">/home</a></li>
+            <li>
+              <a class="menu-item active" href="../../logs.html">/logs</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <article>
+          <header>
+            <br />
+            <a href="../../logs.html">&lt;&lt; ../../logs</a>
+            <h1>Female House Sparrow</h1>
+            <p class="published-date">// published on 2026.06.03</p>
+          </header>
+
+          <figure>
+            <img
+              src="./images/female-house-sparrow.jpg"
+              alt="Female house sparrow (Passer domesticus) on top of a bird feeder."
+              title="Female house sparrow (Passer domesticus)"
+            />
+          </figure>
+          <br />
+
+          <p>
+            I haven't had much time to do any photography since my daughter was
+            born, but I managed to snap this quick shot from my kitchen. I've
+            started just keeping my camera on the window in there so that I can
+            grab it if I spot anything on the feeders.
+          </p>
+
+          <br />
+          <a href="../../logs.html">&lt;&lt; ../../logs</a>
+        </article>
+      </main>
+
+      <footer
+        style="
+          margin-top: 60px;
+          text-align: center;
+          font-size: 0.8rem;
+          color: var(--secondary-color);
+        "
+      >
+        <p>© 2026 Oliver Mitchell.</p>
+      </footer>
+    </div>
+  </body>
+</html>

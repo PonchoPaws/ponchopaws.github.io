@@ -32,7 +32,7 @@
         border-left: 0;
         border-right: 0;
         border-width: 6px;
-        border-color: var(--primary-color);
+        border-color: var(--tertiary-color);
       }
       .terminal-timeline > fieldset > legend {
         margin-left: auto;
@@ -49,6 +49,7 @@
       }
       .terminal-card {
         margin: 0;
+        padding: 0 !important;
       }
       .terminal-card > header > div {
         display: flex;
@@ -56,6 +57,10 @@
         justify-content: flex-start;
         align-items: flex-start;
         width: 100%;
+      }
+
+      .terminal-card > div {
+        overflow: auto;
       }
 
       .terminal-card > header > div > span:first-child {
@@ -75,6 +80,10 @@
           display: inline-block;
         }
 
+        .terminal-card p {
+          margin-bottom: 0;
+        }
+
         .terminal-card > header > div {
           flex-direction: row;
           align-items: center;
@@ -91,14 +100,23 @@
       }
       .terminal-card span.card-date {
         margin-left: 10px;
-        background-color: var(--tertiary-color);
+        background-color: var(--secondary-color);
         padding: 2px 5px 2px 5px;
         border-radius: 2px;
+        font-size: small;
       }
       .terminal-card a.card-title {
         color: var(--invert-font-color);
         margin-left: 10px;
         text-align: left;
+      }
+      .terminal-card-img {
+        float: right;
+        width: 150px;
+        max-width: 35%;
+        height: auto;
+        margin-left: 20px;
+        margin-bottom: 15px;
       }
     </style>
   </head>
@@ -122,12 +140,48 @@
         <h1>~/logs</h1>
         <br />
         <div class="terminal-timeline">
+          <!-- 2026 -->
           <fieldset class="terminal-card">
-            <legend>2025</legend>
+            <legend>2026</legend>
+
+            <!-- May -->
             <div class="terminal-card">
               <header>
                 <div>
-                  <span class="card-date">01.01.2025</span>
+                  <span class="card-date">2026.06.03</span>
+                  <a class="card-title" href="logs/female-house-sparrow.html"
+                    >Female House Sparrow</a
+                  >
+                </div>
+              </header>
+              <div>
+                <img
+                  class="terminal-card-img"
+                  src="./logs/images/female-house-sparrow.jpg"
+                />
+                <p>
+                  I haven't had much time to do any photography since my
+                  daughter was born, but I managed to snap this quick shot from
+                  my kitchen. I've started just keeping my camera on the window
+                  in there so that I can grab it if I spot anything on the
+                  feeders.
+                </p>
+                <a class="read-more-link" href="logs/female-house-sparrow.html"
+                  >&gt; open</a
+                >
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- 2025 -->
+          <fieldset class="terminal-card">
+            <legend>2025</legend>
+
+            <!-- January -->
+            <div class="terminal-card">
+              <header>
+                <div>
+                  <span class="card-date">2025.01.01</span>
                   <a
                     class="card-title"
                     href="logs/learning-photography-with-the-panasonic-lumix-g9.html"
@@ -136,11 +190,16 @@
                 </div>
               </header>
               <div>
-                For me, the Lumix G9’s light weight makes up for the drawbacks
-                inherent to the MFT system. If I’m working from home, I often
-                sling the G9 over my shoulder during a lunch break and try and
-                capture wildlife in the woodlands near my house.
-                <br />
+                <img
+                  class="terminal-card-img"
+                  src="./logs/images/european-robin.jpg"
+                />
+                <p>
+                  For me, the Lumix G9’s light weight makes up for the drawbacks
+                  inherent to the MFT system. If I’m working from home, I often
+                  sling the G9 over my shoulder during a lunch break and try and
+                  capture wildlife in the woodlands near my house.
+                </p>
                 <a
                   class="read-more-link"
                   href="logs/learning-photography-with-the-panasonic-lumix-g9.html"
