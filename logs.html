@@ -12,13 +12,17 @@
       .hidden {
         display: none !important;
       }
-      /* Minor adjustment to space out the read-more links */
       .read-more-link {
         display: inline-block;
         margin-top: 15px;
       }
-      .terminal-timeline {
+      .terminal-timeline::before {
         margin-left: 0px;
+        display: none;
+      }
+      .terminal-timeline .terminal-card::before {
+        margin-left: 0px;
+        display: none;
       }
       .terminal-timeline > fieldset.terminal-card::before {
         display: none;
@@ -37,47 +41,62 @@
         font-size: larger;
         font-weight: bold;
       }
+      .terminal-timeline {
+        padding: 0px;
+      }
       .terminal-timeline > fieldset {
         padding: 0px;
       }
-      /* 1. MOBILE DEFAULT (Small screens): Items stack vertically */
+      .terminal-card {
+        margin: 0;
+      }
       .terminal-card > header > div {
         display: flex;
-        flex-direction: column; /* Forces vertical stacking */
+        flex-direction: column;
         justify-content: flex-start;
-        align-items: flex-start; /* Aligns elements flush to the left edge */
+        align-items: flex-start;
         width: 100%;
       }
 
-      /* Adjust padding for stacked elements so they look clean */
       .terminal-card > header > div > span:first-child {
         padding-left: 10px;
-        margin-bottom: 10px; /* Adds a small gap below the date */
+        margin-bottom: 10px;
       }
 
-      /* 2. DESKTOP OVERRIDE (Screens 768px and wider): Items snap into a horizontal row */
       @media screen and (min-width: 768px) {
+        .terminal-timeline {
+          padding: 40px;
+        }
+        .terminal-timeline::before {
+          margin-left: 0px;
+          display: inline-block;
+        }
+        .terminal-timeline .terminal-card::before {
+          display: inline-block;
+        }
+
         .terminal-card > header > div {
-          flex-direction: row; /* Changes back to a horizontal line layout */
-          align-items: center; /* Centers them vertically along the row baseline */
+          flex-direction: row;
+          align-items: center;
         }
 
         .terminal-card > header > div > span:first-child {
-          padding-bottom: 0; /* Clears the mobile bottom margin */
+          padding-bottom: 0;
           margin-bottom: 0;
         }
 
         .terminal-card > header > div > span:last-child {
-          padding-left: 15px; /* Restores the horizontal gap between elements */
+          padding-left: 15px;
         }
       }
       .terminal-card span.card-date {
         margin-left: 10px;
         background-color: var(--tertiary-color);
         padding: 2px 5px 2px 5px;
-        border-radius: 10px;
+        border-radius: 2px;
       }
-      .terminal-card span.card-title {
+      .terminal-card a.card-title {
+        color: var(--invert-font-color);
         margin-left: 10px;
         text-align: left;
       }
@@ -95,19 +114,13 @@
           <ul>
             <li><a class="menu-item" href="index.html">/home</a></li>
             <li><a class="menu-item active" href="logs.html">/logs</a></li>
-            <li><a class="menu-item" href="collection.html">/archive</a></li>
-            <li><a class="menu-item" href="other.html">/misc</a></li>
           </ul>
         </nav>
       </header>
 
       <main>
         <h1>~/logs</h1>
-        <p>
-          A chronological sequence of updates and essays compiled from local
-          storage.
-        </p>
-
+        <br />
         <div class="terminal-timeline">
           <fieldset class="terminal-card">
             <legend>2025</legend>
@@ -115,8 +128,10 @@
               <header>
                 <div>
                   <span class="card-date">01.01.2025</span>
-                  <span class="card-title"
-                    >Learning Photography with Panasonic Lumix G9</span
+                  <a
+                    class="card-title"
+                    href="logs/learning-photography-with-the-panasonic-lumix-g9.html"
+                    >Learning Photography with Panasonic Lumix G9</a
                   >
                 </div>
               </header>

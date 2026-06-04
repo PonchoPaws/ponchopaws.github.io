@@ -6,13 +6,96 @@
     <title>Oliver Paul Mitchell | Home</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      /* Small helper to prevent content from touching screen edges */
       body {
         padding: 20px;
       }
-      /* Custom spacing to match the terminal grid */
       .hidden {
         display: none !important;
+      }
+      .status-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      .status-column {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 100%;
+        flex: 1;
+        padding: 10px;
+        margin: 5px 10px;
+      }
+      section {
+        border-top: solid 5px var(--tertiary-color);
+        padding: 20px 0px 10px 0px;
+      }
+      section #status-card > header {
+        font-size: larger;
+      }
+      section#status .terminal-card-body {
+        padding: 10px 10px;
+        fieldset {
+          margin-bottom: 10px;
+          border-width: 2px;
+        }
+      }
+      fieldset#currently-playing {
+        border-color: var(--primary-color);
+        border-width: 2px;
+        legend {
+          font-weight: bold;
+          font-size: large;
+          padding: 0px 10px;
+        }
+      }
+      fieldset#working-on {
+        border-color: var(--tertiary-color);
+      }
+      .game-card header span {
+        padding: 5px 5px;
+        font-size: small;
+      }
+      .game-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .game-card figcaption {
+        margin-top: 10px;
+        font-size: 0.75rem;
+        line-height: 15px;
+        text-align: justify;
+      }
+      .game-card #game-info {
+        margin-bottom: 10px;
+        font-size: 0.75rem;
+        line-height: 15px;
+        text-align: left;
+        background-color: #dedede;
+        border-radius: 5px;
+        padding: 10px;
+      }
+      .grid {
+        display: grid;
+        gap: 20px;
+      }
+      #poncho-img {
+        float: right;
+        width: 150px;
+        height: auto;
+        margin-left: 20px;
+        margin-bottom: 15px;
+      }
+      @media screen and (max-width: 767px) {
+        .grid-cols-3 {
+          grid-template-columns: 1fr !important;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        .grid-cols-3 {
+          grid-template-columns: repeat(3, 1fr) !important;
+        }
       }
     </style>
   </head>
@@ -28,14 +111,137 @@
           <ul>
             <li><a class="menu-item active" href="index.html">/home</a></li>
             <li><a class="menu-item" href="logs.html">/logs</a></li>
-            <li><a class="menu-item" href="collection.html">/archive</a></li>
-            <li><a class="menu-item" href="other.html">/misc</a></li>
           </ul>
         </nav>
       </header>
       <main>
-        <section>
-          <h1>~/home</h1>
+        <h1>~/home</h1>
+
+        <!-- ABOUT -->
+        <section id="about">
+          <h2>About Me</h2>
+          <img id="poncho-img" src="./poncho.png" />
+          <p>
+            I'm Oli. I'm a software engineer based in the south-east UK where
+            I've lived all my life.
+          </p>
+          <p>
+            When I'm not working I'm usually playing or writing about computer
+            games which I've been playing since I was 5 or 6 years old. I wear
+            my nostalgia goggles a lot and I'm far more fond of older games than
+            I am of most things that are being released nowadays. My favourite
+            systems are the PlayStation and PlayStation 2 for which I have a
+            large collection.
+          </p>
+          <p>
+            I enjoy photography and birding, two hobbies I picked up back in
+            2024. I'm not particularly great at either but I try and post some
+            photos of birds here on the odd occasion I snap a keeper (assuming
+            my cat Poncho hasn't got there first).
+          </p>
+          <p>
+            Finally, I'm the proud father of my daughter who was born in May
+            2026 and for whom I want to be the best role model possible.
+          </p>
+        </section>
+
+        <!-- STATUS -->
+
+        <section id="status">
+          <h2>Status</h2>
+          <p>
+            A list of things I'm currently working on, games I'm playing, or
+            places I'm going.
+          </p>
+
+          <!-- CURRENTLY PLAYING -->
+
+          <fieldset id="currently-playing">
+            <legend>Currently Playing</legend>
+            <div class="grid grid-cols-3">
+              <div class="terminal-card game-card">
+                <header>
+                  <div>
+                    <span>Breath of Fire IV</span>
+                  </div>
+                </header>
+                <div>
+                  <figure style="margin: 0">
+                    <img
+                      src="https://cdn.mobygames.com/covers/4093281-breath-of-fire-iv-playstation-front-cover.jpg"
+                    />
+                    <figcaption>
+                      <div id="game-info">
+                        <span><b>Title:</b> Breath of Fire IV</span><br />
+                        <span><b>Platform:</b> PlayStation</span><br />
+                        <span><b>Released:</b> 2000</span><br />
+                        <span><b>Developer / Publisher:</b> Capcom</span>
+                      </div>
+
+                      <p>
+                        I've never played this JRPG series and don't know much
+                        about it. However, I was quickly drawn-in by the
+                        excellent painterly sprite work.
+                      </p>
+                      <p>
+                        I'm only a short way in so far and there are things I
+                        like and don't like. The camera system seems obtrusive
+                        to the point it's annoying to navigate towns. It's
+                        similar to the 360 degrees from Xenogears but not
+                        executed as nicely despite being released 2 years later.
+                      </p>
+                      <p>
+                        The characters seem fun and somewhat unique to me. I'm
+                        particularly enjoying Ershin, the stout robot with oddly
+                        blunt dialogue.
+                      </p>
+                      <p>
+                        We'll see how we go but if I enjoy and finish this entry
+                        I may go back to play the earlier entries. I've heard
+                        III is also a solid JRPG.
+                      </p>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+
+              <div class="terminal-card game-card">
+                <header>
+                  <div>
+                    <span>Monster Hunter Freedom Unite</span>
+                  </div>
+                </header>
+                <div>
+                  <figure style="margin: 0">
+                    <img
+                      src="https://cdn.mobygames.com/covers/6484780-monster-hunter-freedom-unite-psp-front-cover.jpg"
+                    />
+                    <figcaption>
+                      <div id="game-info">
+                        <span><b>Title:</b> Monster Hunter Freedom Unite</span
+                        ><br />
+                        <span><b>Platform:</b> PlayStation Portable</span><br />
+                        <span><b>Released:</b> 2008</span><br />
+                        <span><b>Developer / Publisher:</b> Capcom</span>
+                      </div>
+                      <p>
+                        I'm a long-time fan of the Monster Hunter series since
+                        being introduced to it with Monster Hunter Tri back on
+                        the Nintendo Wii. I never owned a PSP and had therefore
+                        never played Freedom Unite before I purchased a console
+                        recently.
+                      </p>
+                      <p>
+                        I'm really enjoying this entry despite the clunkiness
+                        compared to the modern games. There's a certain charm to
+                        old-school Monster Hunter.
+                      </p>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </fieldset>
         </section>
       </main>
 
