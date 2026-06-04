@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oliver Paul Mitchell | Logs</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        padding: 20px;
+      }
+      .hidden {
+        display: none !important;
+      }
+      /* Minor adjustment to space out the read-more links */
+      .read-more-link {
+        display: inline-block;
+        margin-top: 15px;
+      }
+      .terminal-timeline {
+        margin-left: 0px;
+      }
+      .terminal-timeline > fieldset.terminal-card::before {
+        display: none;
+      }
+      .terminal-timeline > fieldset.terminal-card {
+        border-bottom: 0;
+        border-left: 0;
+        border-right: 0;
+        border-width: 6px;
+        border-color: var(--primary-color);
+      }
+      .terminal-timeline > fieldset > legend {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        font-size: larger;
+        font-weight: bold;
+      }
+      .terminal-timeline > fieldset {
+        padding: 0px;
+      }
+      /* 1. MOBILE DEFAULT (Small screens): Items stack vertically */
+      .terminal-card > header > div {
+        display: flex;
+        flex-direction: column; /* Forces vertical stacking */
+        justify-content: flex-start;
+        align-items: flex-start; /* Aligns elements flush to the left edge */
+        width: 100%;
+      }
+
+      /* Adjust padding for stacked elements so they look clean */
+      .terminal-card > header > div > span:first-child {
+        padding-left: 10px;
+        margin-bottom: 10px; /* Adds a small gap below the date */
+      }
+
+      /* 2. DESKTOP OVERRIDE (Screens 768px and wider): Items snap into a horizontal row */
+      @media screen and (min-width: 768px) {
+        .terminal-card > header > div {
+          flex-direction: row; /* Changes back to a horizontal line layout */
+          align-items: center; /* Centers them vertically along the row baseline */
+        }
+
+        .terminal-card > header > div > span:first-child {
+          padding-bottom: 0; /* Clears the mobile bottom margin */
+          margin-bottom: 0;
+        }
+
+        .terminal-card > header > div > span:last-child {
+          padding-left: 15px; /* Restores the horizontal gap between elements */
+        }
+      }
+      .terminal-card span.card-date {
+        margin-left: 10px;
+        background-color: var(--tertiary-color);
+        padding: 2px 5px 2px 5px;
+        border-radius: 10px;
+      }
+      .terminal-card span.card-title {
+        margin-left: 10px;
+        text-align: left;
+      }
+    </style>
+  </head>
+  <body class="terminal-body">
+    <div class="container">
+      <header class="terminal-nav">
+        <div class="terminal-logo">
+          <div class="logo terminal-prompt">
+            <a href="index.html" class="no-style">user@oliverpaulmitchell:~</a>
+          </div>
+        </div>
+        <nav class="terminal-menu">
+          <ul>
+            <li><a class="menu-item" href="index.html">/home</a></li>
+            <li><a class="menu-item active" href="logs.html">/logs</a></li>
+            <li><a class="menu-item" href="collection.html">/archive</a></li>
+            <li><a class="menu-item" href="other.html">/misc</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <h1>~/logs</h1>
+        <p>
+          A chronological sequence of updates and essays compiled from local
+          storage.
+        </p>
+
+        <div class="terminal-timeline">
+          <fieldset class="terminal-card">
+            <legend>2025</legend>
+            <div class="terminal-card">
+              <header>
+                <div>
+                  <span class="card-date">01.01.2025</span>
+                  <span class="card-title"
+                    >Learning Photography with Panasonic Lumix G9</span
+                  >
+                </div>
+              </header>
+              <div>
+                For me, the Lumix G9’s light weight makes up for the drawbacks
+                inherent to the MFT system. If I’m working from home, I often
+                sling the G9 over my shoulder during a lunch break and try and
+                capture wildlife in the woodlands near my house.
+                <br />
+                <a
+                  class="read-more-link"
+                  href="logs/learning-photography-with-the-panasonic-lumix-g9.html"
+                  >&gt; open</a
+                >
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </main>
+
+      <footer
+        style="
+          margin-top: 60px;
+          text-align: center;
+          font-size: 0.8rem;
+          color: var(--secondary-color);
+        "
+      >
+        <p>© 2026 Oliver Mitchell.</p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
