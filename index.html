@@ -12,61 +12,35 @@
       .hidden {
         display: none !important;
       }
-      .status-row {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-      }
-      .status-column {
-        display: flex;
-        flex-direction: column;
-        flex-basis: 100%;
-        flex: 1;
+      .subtitle {
         padding: 10px;
-        margin: 5px 10px;
+        border-left: 15px solid var(--primary-color);
       }
       section {
         border-top: solid 5px var(--tertiary-color);
         padding: 20px 0px 10px 0px;
       }
-      section #status-card > header {
-        font-size: larger;
-      }
-      section#status .terminal-card-body {
-        padding: 10px 10px;
-        fieldset {
-          margin-bottom: 10px;
-          border-width: 2px;
-        }
-      }
-      fieldset#currently-playing {
-        border-color: var(--primary-color);
-        border-width: 2px;
-        legend {
-          font-weight: bold;
-          font-size: large;
-          padding: 0px 10px;
-        }
-      }
-      fieldset#working-on {
-        border-color: var(--tertiary-color);
-      }
       .game-card {
         border-bottom: solid 10px var(--tertiary-color);
       }
       .game-card header {
-        border-bottom: solid 10px var(--tertiary-color);
-        background-color: var(--font-color);
+        border-bottom: solid 1px var(--font-color);
+        background-color: black;
+        color: var(--invert-font-color);
+        padding: 12px 0px;
+        font-weight: bold;
+        border-bottom: solid 10px var(--primary-color);
       }
       .game-card header span {
-        padding: 5px 5px;
-        font-size: small;
+        padding: 5px 0px;
+        font-size: medium;
       }
       .game-card img {
-        width: 100%;
+        width: auto;
         height: auto;
+        max-height: 300px;
         display: block;
+        margin: 10px auto 20px auto;
       }
       .game-card figcaption {
         margin-top: 10px;
@@ -80,23 +54,12 @@
         line-height: 15px;
         text-align: left;
         background-color: #dedede;
-        border-radius: 5px;
+        border-radius: 3px;
         padding: 10px;
       }
       .grid {
         display: grid;
         gap: 20px;
-      }
-      #poncho-img {
-        float: right;
-        width: 150px;
-        height: auto;
-        margin-left: 20px;
-        margin-bottom: 15px;
-      }
-      .subtitle {
-        padding: 10px;
-        border-left: 15px solid var(--primary-color);
       }
       @media screen and (max-width: 767px) {
         .grid-cols-3 {
@@ -131,10 +94,9 @@
 
         <!-- ABOUT -->
         <section id="about">
-          <img id="poncho-img" src="./poncho.png" />
           <p>
-            I'm Oli. I'm a software engineer based in the south-east UK where
-            I've lived all my life.
+            I'm <span class="accented">Oliver</span>. I'm a software engineer
+            based in the south-east UK where I've lived all my life.
           </p>
           <p>
             When I'm not working I'm usually playing or writing about computer

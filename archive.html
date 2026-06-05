@@ -12,6 +12,100 @@
       .hidden {
         display: none !important;
       }
+      .subtitle {
+        padding: 10px;
+        border-left: 15px solid var(--primary-color);
+        margin-bottom: 0;
+      }
+      section {
+        border-top: solid 5px var(--tertiary-color);
+        padding: 20px 0px 10px 0px;
+      }
+      .game-card {
+        border-bottom: solid 10px var(--tertiary-color);
+      }
+      .game-card header {
+        border-bottom: solid 1px var(--font-color);
+        padding-bottom: 10px;
+        background-color: var(--background-color);
+        color: var(--font-color);
+        font-weight: bold;
+      }
+      .game-card header span {
+        padding: 5px 5px;
+        font-size: small;
+      }
+      .game-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .game-card figcaption {
+        margin-top: 10px;
+        font-size: 0.85rem;
+        line-height: 15px;
+        text-align: left;
+      }
+      .game-card #game-info {
+        margin-bottom: 10px;
+        font-size: 0.75rem;
+        line-height: 15px;
+        text-align: left;
+        background-color: #dedede;
+        border-radius: 3px;
+        padding: 10px;
+      }
+      .grid {
+        display: grid;
+        gap: 20px;
+      }
+      @media screen and (max-width: 767px) {
+        .grid-cols-3 {
+          grid-template-columns: 1fr !important;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        .grid-cols-3 {
+          grid-template-columns: repeat(3, 1fr) !important;
+        }
+      }
+      .table-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: 1rem;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th {
+        background-color: #dadada;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid #ccc;
+        white-space: nowrap;
+      }
+      th:nth-child(2),
+      td:nth-child(2) {
+        white-space: normal;
+        min-width: 150px;
+        max-width: 300px;
+      }
+
+      th:nth-child(5),
+      td:nth-child(5),
+      th:nth-child(6),
+      td:nth-child(6),
+      th:nth-child(7),
+      td:nth-child(7) {
+        white-space: normal;
+        min-width: 100px;
+        max-width: 200px;
+      }
     </style>
   </head>
   <body class="terminal-body">
@@ -34,8 +128,50 @@
       </header>
       <main>
         <h1>~/archive</h1>
-
-        <section id="archive"></section>
+        <section id="archive">
+          <p>Records of all physical video games in my collection.</p>
+          <h3 class="subtitle">PlayStation</h3>
+          <div class="table-container">
+            <table>
+              <thead>
+                <tr>
+                  <th>Serial No.</th>
+                  <th>Title</th>
+                  <th>Region</th>
+                  <th>Released</th>
+                  <th>Developer</th>
+                  <th>Publisher</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SLES-02498</td>
+                  <td>Disney's 102 Dalmatians - Puppies to the Rescue</td>
+                  <td>PAL</td>
+                  <td>2000.12.8</td>
+                  <td>Crystal Dynamics</td>
+                  <td>Eidos Interactive</td>
+                </tr>
+                <tr>
+                  <td>SLES-03189</td>
+                  <td>Army Men - Air Attack</td>
+                  <td>PAL</td>
+                  <td>2000.8.10</td>
+                  <td>3DO</td>
+                  <td>3DO</td>
+                </tr>
+                <tr>
+                  <td>SLES-00524</td>
+                  <td>Castlevania Symphony of the Night</td>
+                  <td>PAL</td>
+                  <td>1997.11.2</td>
+                  <td>Konami</td>
+                  <td>Konami</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
       </main>
 
       <footer
