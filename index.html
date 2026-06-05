@@ -52,6 +52,13 @@
       fieldset#working-on {
         border-color: var(--tertiary-color);
       }
+      .game-card {
+        border-bottom: solid 10px var(--tertiary-color);
+      }
+      .game-card header {
+        border-bottom: solid 10px var(--tertiary-color);
+        background-color: var(--font-color);
+      }
       .game-card header span {
         padding: 5px 5px;
         font-size: small;
@@ -63,9 +70,9 @@
       }
       .game-card figcaption {
         margin-top: 10px;
-        font-size: 0.75rem;
+        font-size: 0.85rem;
         line-height: 15px;
-        text-align: justify;
+        text-align: left;
       }
       .game-card #game-info {
         margin-bottom: 10px;
@@ -86,6 +93,10 @@
         height: auto;
         margin-left: 20px;
         margin-bottom: 15px;
+      }
+      .subtitle {
+        padding: 10px;
+        border-left: 15px solid var(--primary-color);
       }
       @media screen and (max-width: 767px) {
         .grid-cols-3 {
@@ -111,6 +122,7 @@
           <ul>
             <li><a class="menu-item active" href="index.html">/home</a></li>
             <li><a class="menu-item" href="logs.html">/logs</a></li>
+            <li><a class="menu-item" href="archive.html">/archive</a></li>
           </ul>
         </nav>
       </header>
@@ -126,11 +138,9 @@
           </p>
           <p>
             When I'm not working I'm usually playing or writing about computer
-            games which I've been playing since I was 5 or 6 years old. I wear
-            my nostalgia goggles a lot and I'm far more fond of older games than
-            I am of most things that are being released nowadays. My favourite
-            systems are the PlayStation and PlayStation 2 for which I have a
-            large collection.
+            games. I'm most fond of retro gaming over anything modern, and my
+            favourite systems are the PlayStation and PlayStation 2 which I own
+            a growing physical collection for.
           </p>
           <p>
             I enjoy photography and birding, two hobbies I picked up back in
@@ -139,108 +149,101 @@
             my cat Poncho hasn't got there first).
           </p>
           <p>
-            Finally, I'm the proud father of my daughter who was born in May
-            2026 and for whom I want to be the best role model possible.
+            Finally, my wife and I are the proud parents of our daughter who was
+            born in May 2026 and for whom I want to be the best role model
+            possible.
           </p>
         </section>
 
         <!-- STATUS -->
 
         <section id="status">
-          <h2>What am I up to?</h2>
-          <p>
-            A list of things I'm currently working on, games I'm playing, or
-            places I'm going.
-          </p>
-
           <!-- CURRENTLY PLAYING -->
 
-          <fieldset id="currently-playing">
-            <legend>Currently Playing</legend>
-            <div class="grid grid-cols-3">
-              <div class="terminal-card game-card">
-                <header>
-                  <div>
-                    <span>Breath of Fire IV</span>
-                  </div>
-                </header>
+          <h3 class="subtitle">Currently Playing</h3>
+          <div class="grid grid-cols-3">
+            <div class="terminal-card game-card">
+              <header>
                 <div>
-                  <figure style="margin: 0">
-                    <img
-                      src="https://cdn.mobygames.com/covers/4093281-breath-of-fire-iv-playstation-front-cover.jpg"
-                    />
-                    <figcaption>
-                      <div id="game-info">
-                        <span><b>Title:</b> Breath of Fire IV</span><br />
-                        <span><b>Platform:</b> PlayStation</span><br />
-                        <span><b>Released:</b> 2000</span><br />
-                        <span><b>Developer / Publisher:</b> Capcom</span>
-                      </div>
-
-                      <p>
-                        I've never played this JRPG series and don't know much
-                        about it. However, I was quickly drawn-in by the
-                        excellent painterly sprite work.
-                      </p>
-                      <p>
-                        I'm only a short way in so far and there are things I
-                        like and don't like. The camera system seems obtrusive
-                        to the point it's annoying to navigate towns. It's
-                        similar to the 360 degrees from Xenogears but not
-                        executed as nicely despite being released 2 years later.
-                      </p>
-                      <p>
-                        The characters seem fun and somewhat unique to me. I'm
-                        particularly enjoying Ershin, the stout robot with oddly
-                        blunt dialogue.
-                      </p>
-                      <p>
-                        We'll see how we go but if I enjoy and finish this entry
-                        I may go back to play the earlier entries. I've heard
-                        III is also a solid JRPG.
-                      </p>
-                    </figcaption>
-                  </figure>
+                  <span>Breath of Fire IV</span>
                 </div>
-              </div>
+              </header>
+              <div>
+                <figure style="margin: 0">
+                  <img
+                    src="https://cdn.mobygames.com/covers/4093281-breath-of-fire-iv-playstation-front-cover.jpg"
+                  />
+                  <figcaption>
+                    <div id="game-info">
+                      <span><b>Title:</b> Breath of Fire IV</span><br />
+                      <span><b>Platform:</b> PlayStation</span><br />
+                      <span><b>Released:</b> 2000</span><br />
+                      <span><b>Developer / Publisher:</b> Capcom</span>
+                    </div>
 
-              <div class="terminal-card game-card">
-                <header>
-                  <div>
-                    <span>Monster Hunter Freedom Unite</span>
-                  </div>
-                </header>
-                <div>
-                  <figure style="margin: 0">
-                    <img
-                      src="https://cdn.mobygames.com/covers/6484780-monster-hunter-freedom-unite-psp-front-cover.jpg"
-                    />
-                    <figcaption>
-                      <div id="game-info">
-                        <span><b>Title:</b> Monster Hunter Freedom Unite</span
-                        ><br />
-                        <span><b>Platform:</b> PlayStation Portable</span><br />
-                        <span><b>Released:</b> 2008</span><br />
-                        <span><b>Developer / Publisher:</b> Capcom</span>
-                      </div>
-                      <p>
-                        I'm a long-time fan of the Monster Hunter series since
-                        being introduced to it with Monster Hunter Tri back on
-                        the Nintendo Wii. I never owned a PSP and had therefore
-                        never played Freedom Unite before I purchased a console
-                        recently.
-                      </p>
-                      <p>
-                        I'm really enjoying this entry despite the clunkiness
-                        compared to the modern games. There's a certain charm to
-                        old-school Monster Hunter.
-                      </p>
-                    </figcaption>
-                  </figure>
-                </div>
+                    <p>
+                      I've never played this JRPG series and don't know much
+                      about it. However, I was quickly drawn-in by the excellent
+                      painterly sprite work.
+                    </p>
+                    <p>
+                      I'm only a short way in so far and there are things I like
+                      and don't like. The camera system seems obtrusive to the
+                      point it's annoying to navigate towns. It's similar to the
+                      360 degrees from Xenogears but not executed as nicely
+                      despite being released 2 years later.
+                    </p>
+                    <p>
+                      The characters seem fun and somewhat unique to me. I'm
+                      particularly enjoying Ershin, the stout robot with oddly
+                      blunt dialogue.
+                    </p>
+                    <p>
+                      We'll see how we go but if I enjoy and finish this entry I
+                      may go back to play the earlier entries. I've heard III is
+                      also a solid JRPG.
+                    </p>
+                  </figcaption>
+                </figure>
               </div>
             </div>
-          </fieldset>
+
+            <div class="terminal-card game-card">
+              <header>
+                <div>
+                  <span>Monster Hunter Freedom Unite</span>
+                </div>
+              </header>
+              <div>
+                <figure style="margin: 0">
+                  <img
+                    src="https://cdn.mobygames.com/covers/6484780-monster-hunter-freedom-unite-psp-front-cover.jpg"
+                  />
+                  <figcaption>
+                    <div id="game-info">
+                      <span><b>Title:</b> Monster Hunter Freedom Unite</span
+                      ><br />
+                      <span><b>Platform:</b> PlayStation Portable</span><br />
+                      <span><b>Released:</b> 2008</span><br />
+                      <span><b>Developer / Publisher:</b> Capcom</span>
+                    </div>
+                    <p>
+                      I'm a long-time fan of the Monster Hunter series since
+                      being introduced to it with Monster Hunter Tri back on the
+                      Nintendo Wii. I never owned a PSP and had therefore never
+                      played Freedom Unite before I purchased a console
+                      recently.
+                    </p>
+                    <p>
+                      I'm really enjoying this entry despite the clunkiness
+                      compared to the modern games. There's a certain charm to
+                      old-school Monster Hunter.
+                    </p>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
 
