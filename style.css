@@ -10,6 +10,7 @@
     "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono",
     "Bitstream Vera Sans Mono", "Courier New", serif;
   --background-color: #f9f4eb;
+  --darker-background-color: #eee9e1;
   --page-width: 70em;
   --font-color: #1e1e1e;
   --invert-font-color: #fff;
@@ -47,6 +48,38 @@ body {
   background-color: var(--background-color);
 }
 
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+/* Desktop layout: Side-by-side with a horizontal gap */
+@media screen and (min-width: 768px) {
+  .row {
+    flex-direction: row;
+    /* Adds 30px of horizontal space strictly between the blurb and the cover art */
+    column-gap: 10px;
+  }
+}
+
+/* Mobile layout: Stacked with a vertical gap */
+@media screen and (max-width: 767px) {
+  .row {
+    flex-direction: column;
+    /* Adds 20px of vertical space between the text and image when stacked */
+    row-gap: 10px;
+  }
+}
+
 .subtitle {
   padding: 10px;
   border-left: 15px solid var(--primary-color);
@@ -63,14 +96,29 @@ section section {
   border-top: none;
 }
 
-.curved-nav-menu {
-  font-size: 0.75rem;
-  line-height: 15px;
-  text-align: left;
+h1.game-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.serial-no {
+  background-color: var(--primary-color);
+  font-size: 0.8rem;
+  text-align: center;
   border-radius: 3px;
   padding: 0px 10px;
-  li {
-    margin: 5px 0px;
+}
+
+.game-blurb {
+  background-color: var(--darker-background-color);
+  padding: 1em;
+  font-style: oblique;
+  border-radius: 5px;
+  border: solid 1px var(--secondary-color);
+  p {
+    margin: 0;
+    color: var(--secondary-color);
   }
 }
 
