@@ -50,12 +50,13 @@ body {
 .subtitle {
   padding: 10px;
   border-left: 15px solid var(--primary-color);
+  margin-top: 20px;
   margin-bottom: 1em;
 }
 
 section {
   border-top: solid 5px var(--tertiary-color);
-  padding: 20px 0px 10px 0px !important;
+  padding: 0px 0px 10px 0px !important;
 }
 
 h1,
@@ -860,6 +861,7 @@ select:-webkit-autofill:focus {
     background-color: #dedede;
     border-radius: 10px;
     padding: 10px;
+    margin-bottom: 15px;
     ul {
       margin: 0;
     }
