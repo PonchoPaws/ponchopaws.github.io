@@ -10,14 +10,45 @@ function initArchiveEngine() {
 
   filterButtons.forEach((btn) => btn.setAttribute("data-active", "false"));
 
-  // Helper helper to bind EITHER mobile pointer touch or standard mouse click
+  // ==========================================
+  // GESTURE-AWARE SMART CLICK HANDLER
+  // ==========================================
   function bindSmartClick(element, callback) {
-    // If the browser supports native PointerEvents (like your S23), use pointerdown for immediate execution
-    const eventType = window.PointerEvent ? "pointerdown" : "click";
-    element.addEventListener(eventType, (e) => {
-      // Prevents mobile browsers from firing a duplicate 'ghost' mouse click 300ms later
-      e.preventDefault();
-      callback(e);
+    let startX = 0;
+    let startY = 0;
+    let isDragging = false;
+
+    // 1. Record initial touch/pointer coordinates
+    element.addEventListener("pointerdown", (e) => {
+      startX = e.clientX;
+      startY = e.clientY;
+      isDragging = false;
+    });
+
+    // 2. Track thumb movement to distinguish a click from a swipe drag
+    element.addEventListener("pointermove", (e) => {
+      // If the movement exceeds a 5px threshold, flag it as a page scroll
+      if (
+        Math.abs(e.clientX - startX) > 5 ||
+        Math.abs(e.clientY - startY) > 5
+      ) {
+        isDragging = true;
+      }
+    });
+
+    // 3. Only execute actions if a clean tap occurred
+    element.addEventListener("pointerup", (e) => {
+      if (!isDragging) {
+        e.preventDefault(); // Stop mobile ghost click delays
+        callback(e);
+      }
+    });
+
+    // Desktop fallback for keyboard accessibility (Space/Enter)
+    element.addEventListener("click", (e) => {
+      if (e.clientX === 0 && e.clientY === 0) {
+        callback(e);
+      }
     });
   }
 
