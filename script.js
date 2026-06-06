@@ -1,4 +1,3 @@
-// Safety handler: Initialize immediately if DOM is already fully painted (common on mobile)
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", initArchiveEngine);
 } else {
@@ -9,25 +8,32 @@ function initArchiveEngine() {
   const tables = document.querySelectorAll(".archive-table");
   const filterButtons = document.querySelectorAll(".filter-btn");
 
-  // Initialize all buttons to an explicit string tracking state
   filterButtons.forEach((btn) => btn.setAttribute("data-active", "false"));
 
+  // Helper helper to bind EITHER mobile pointer touch or standard mouse click
+  function bindSmartClick(element, callback) {
+    // If the browser supports native PointerEvents (like your S23), use pointerdown for immediate execution
+    const eventType = window.PointerEvent ? "pointerdown" : "click";
+    element.addEventListener(eventType, (e) => {
+      // Prevents mobile browsers from firing a duplicate 'ghost' mouse click 300ms later
+      e.preventDefault();
+      callback(e);
+    });
+  }
+
   // ==========================================
-  // FEATURE 1: ROBUST MOBILE FILTER LOGIC
+  // FEATURE 1: NATIVE TERMINAL.CSS BUTTON FILTER
   // ==========================================
   filterButtons.forEach((button) => {
-    button.addEventListener("click", (e) => {
-      // FIX: Mobile browsers handle raw attributes infinitely faster than CSS class lists
+    bindSmartClick(button, () => {
       const isAlreadyActive = button.getAttribute("data-active") === "true";
 
-      // 1. RESET ALL BUTTONS: Force them all back to ghost status
       filterButtons.forEach((btn) => {
         btn.setAttribute("data-active", "false");
         btn.classList.remove("btn-tertiary");
         btn.classList.add("btn-ghost");
       });
 
-      // 2. Evaluate target active filter profile
       let activeFilter = null;
       if (!isAlreadyActive) {
         button.setAttribute("data-active", "true");
@@ -36,17 +42,14 @@ function initArchiveEngine() {
         activeFilter = button.getAttribute("data-filter");
       }
 
-      // 3. Cascade visibility update to rows across all archive tables
       tables.forEach((table) => {
         const rows = table.querySelectorAll("tbody tr");
-
         rows.forEach((row) => {
           const rowRegion = row.cells[2].textContent.trim();
-
           if (activeFilter === null || rowRegion === activeFilter) {
-            row.style.display = ""; // Render row
+            row.style.display = "";
           } else {
-            row.style.display = "none"; // Hide row
+            row.style.display = "none";
           }
         });
       });
@@ -64,7 +67,7 @@ function initArchiveEngine() {
     );
 
     headers.forEach((header, index) => {
-      header.addEventListener("click", () => {
+      bindSmartClick(header, () => {
         const rows = Array.from(tbody.querySelectorAll("tr"));
         const isDate = header.getAttribute("data-type") === "date";
         const setAsDescending = header.textContent.endsWith(" ▲");
