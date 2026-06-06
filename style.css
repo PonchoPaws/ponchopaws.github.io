@@ -856,18 +856,6 @@ select:-webkit-autofill:focus {
   border-color: var(--primary-color);
 }
 
-@media screen and (max-width: 480px) {
-  .terminal-menu {
-    background-color: #dedede;
-    border-radius: 10px;
-    padding: 10px;
-    margin-bottom: 15px;
-    ul {
-      margin: 0;
-    }
-  }
-}
-
 @media screen and (width <= 960px) {
   label {
     display: block;
