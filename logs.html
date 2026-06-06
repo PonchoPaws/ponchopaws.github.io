@@ -12,14 +12,6 @@
       .hidden {
         display: none !important;
       }
-      .subtitle {
-        padding: 10px;
-        border-left: 15px solid var(--primary-color);
-      }
-      section {
-        border-top: solid 5px var(--tertiary-color);
-        padding: 20px 0px 10px 0px;
-      }
       .read-more-link {
         display: inline-block;
         margin-top: 15px;
@@ -150,24 +142,13 @@
 
       <main>
         <h1>~/logs</h1>
-        <section id="intro">
-          <p>This page is a chronological list of blog posts.</p>
 
-          <nav>
-            <ul>
-              <li><a href="#2026">2026</a></li>
-              <li><a href="#2025">2025</a></li>
-            </ul>
-          </nav>
-        </section>
         <section id="timeline">
           <div class="terminal-timeline">
             <!-- 2026 -->
-            <fieldset id="2026" class="terminal-card">
-              <legend>2026</legend>
-
+            <div id="2026" style="margin-bottom: 20px">
               <!-- June -->
-              <h3 class="subtitle">June</h3>
+              <h3 class="subtitle">June 2026</h3>
               <div class="terminal-card">
                 <header>
                   <div>
@@ -178,10 +159,6 @@
                   </div>
                 </header>
                 <div>
-                  <img
-                    class="terminal-card-img"
-                    src="./logs/images/female-house-sparrow.jpg"
-                  />
                   <p>
                     I haven't had much time to do any photography since my
                     daughter was born, but I managed to snap this quick shot
@@ -196,14 +173,12 @@
                   >
                 </div>
               </div>
-            </fieldset>
+            </div>
 
             <!-- 2025 -->
-            <fieldset id="2025" class="terminal-card">
-              <legend>2025</legend>
-
+            <div id="2025" style="margin-bottom: 20px">
               <!-- January -->
-              <h3 class="subtitle">January</h3>
+              <h3 class="subtitle">January 2025</h3>
               <div class="terminal-card">
                 <header>
                   <div>
@@ -216,10 +191,6 @@
                   </div>
                 </header>
                 <div>
-                  <img
-                    class="terminal-card-img"
-                    src="./logs/images/european-robin.jpg"
-                  />
                   <p>
                     For me, the Lumix G9’s light weight makes up for the
                     drawbacks inherent to the MFT system. If I’m working from
@@ -234,7 +205,7 @@
                   >
                 </div>
               </div>
-            </fieldset>
+            </div>
           </div>
         </section>
       </main>

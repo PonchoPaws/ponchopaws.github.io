@@ -12,11 +12,14 @@
       .hidden {
         display: none !important;
       }
+      article header {
+        border-top: solid 5px var(--tertiary-color);
+      }
       .published-date {
-        background-color: var(--tertiary-color);
+        background-color: var(--primary-color);
         color: var(--invert-font-color);
         padding: 6px 12px 6px 12px;
-        border-radius: 10px;
+        border-radius: 5px;
         display: inline-block;
         font-weight: bold;
       }
@@ -34,6 +37,11 @@
           grid-template-columns: repeat(3, 1fr) !important;
         }
       }
+      .terminal-card header {
+        border: none;
+        font-weight: bold;
+        background-color: var(--secondary-color);
+      }
     </style>
   </head>
   <body class="terminal-body">
@@ -48,10 +56,9 @@
         </div>
         <nav class="terminal-menu">
           <ul>
-            <li><a class="menu-item" href="../../index.html">/home</a></li>
-            <li>
-              <a class="menu-item active" href="../../logs.html">/logs</a>
-            </li>
+            <li><a class="menu-item" href="../index.html">/home</a></li>
+            <li><a class="menu-item active" href="../logs.html">/logs</a></li>
+            <li><a class="menu-item" href="../archive.html">/archive</a></li>
           </ul>
         </nav>
       </header>
@@ -59,8 +66,6 @@
       <main>
         <article>
           <header>
-            <br />
-            <a href="../../logs.html">&lt;&lt; ../../logs</a>
             <h1>Learning Photography with the Panasonic Lumix G9</h1>
             <p class="published-date">// published on 2025.01.01</p>
           </header>
@@ -150,7 +155,7 @@
             woodlands near my house.
           </p>
 
-          <h2>gallery/</h2>
+          <h2 class="subtitle">Gallery</h2>
 
           <p>
             Below are some of my favourite photographs I've captured over the
@@ -165,7 +170,7 @@
             <div class="terminal-card">
               <header>
                 <div>
-                  <span>/european-robin</span>
+                  <span>/european-robin.jpg</span>
                 </div>
               </header>
               <div>
@@ -252,7 +257,7 @@
           </div>
 
           <br />
-          <a href="../../logs.html">&lt;&lt; ../../logs</a>
+          <a href="../../logs.html">&lt;&lt; return.</a>
         </article>
       </main>
 
