@@ -6,6 +6,9 @@
     <title>Oliver Paul Mitchell | Archive</title>
     <link rel="stylesheet" href="style.css" />
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         padding: 20px;
       }
@@ -15,7 +18,7 @@
       .subtitle {
         padding: 10px;
         border-left: 15px solid var(--primary-color);
-        margin-bottom: 0;
+        margin-bottom: 1em;
       }
       section {
         border-top: solid 5px var(--tertiary-color);
@@ -106,6 +109,32 @@
         min-width: 100px;
         max-width: 200px;
       }
+      .archive-table thead th {
+        cursor: pointer;
+        user-select: none;
+        padding-right: 20px;
+        position: relative;
+      }
+      .archive-table thead th:hover {
+        background-color: var(--primary-color, #fff);
+        color: #000;
+      }
+
+      @media (max-width: 600px) {
+        .btn-group {
+          display: flex !important;
+          flex-direction: column; /
+          width: 100%;
+          gap: 5px;
+        }
+
+        .btn-group .btn {
+          width: 100% !important;
+          margin: 0 !important;
+          border-radius: 0 !important;
+          text-align: center;
+        }
+      }
     </style>
   </head>
   <body class="terminal-body">
@@ -129,96 +158,172 @@
       <main>
         <h1>~/archive</h1>
         <section id="archive">
-          <p>Records of all physical video games in my collection.</p>
-          <h3 class="subtitle">PlayStation</h3>
-          <div class="table-container">
-            <table>
-              <thead>
-                <tr>
-                  <th>Serial No.</th>
-                  <th>Title</th>
-                  <th>Region</th>
-                  <th>Released</th>
-                  <th>Developer</th>
-                  <th>Publisher</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>SLES-00055</td>
-                  <td>Descent</td>
-                  <td>PAL</td>
-                  <td>1996.05.14</td>
-                  <td>Parallax Software</td>
-                  <td>Interplay</td>
-                </tr>
-                <tr>
-                  <td>SLES-00132</td>
-                  <td>Doom</td>
-                  <td>PAL</td>
-                  <td>1995.11.16</td>
-                  <td>Williams Entertainment</td>
-                  <td>GT Interactive</td>
-                </tr>
-                <tr>
-                  <td>SLES-00524</td>
-                  <td>Castlevania Symphony of the Night</td>
-                  <td>PAL</td>
-                  <td>1997.11.02</td>
-                  <td>Konami</td>
-                  <td>Konami</td>
-                </tr>
-                <tr>
-                  <td>SLES-01156</td>
-                  <td>Diablo</td>
-                  <td>PAL</td>
-                  <td>1998.04.15</td>
-                  <td>Climax Studios (Blizzard Entertainment)</td>
-                  <td>Electronic Arts</td>
-                </tr>
-                <tr>
-                  <td>SLES-01794</td>
-                  <td>Civilization II</td>
-                  <td>PAL</td>
-                  <td>1999.01.01</td>
-                  <td>Microprose</td>
-                  <td>Activision</td>
-                </tr>
-                <tr>
-                  <td>SLES-02270</td>
-                  <td>Eternal Eyes</td>
-                  <td>PAL</td>
-                  <td>2000.11.22</td>
-                  <td>TamTam</td>
-                  <td>Sunsoft</td>
-                </tr>
-                <tr>
-                  <td>SLES-02498</td>
-                  <td>Disney's 102 Dalmatians - Puppies to the Rescue</td>
-                  <td>PAL</td>
-                  <td>2000.12.08</td>
-                  <td>Crystal Dynamics</td>
-                  <td>Eidos Interactive</td>
-                </tr>
-                <tr>
-                  <td>SLES-02914</td>
-                  <td>Digimon World</td>
-                  <td>PAL</td>
-                  <td>2000.06.30</td>
-                  <td>BEC (Bandai Entertainment Company)</td>
-                  <td>Bandai</td>
-                </tr>
-                <tr>
-                  <td>SLES-03189</td>
-                  <td>Army Men - Air Attack</td>
-                  <td>PAL</td>
-                  <td>2000.08.10</td>
-                  <td>3DO</td>
-                  <td>3DO</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <p>
+            This page records all physical video games in my collection. Use the
+            navigation links below to quickly scroll to a specific system.
+          </p>
+
+          <nav>
+            <ul>
+              <li><a href="#playstation-1">PlayStation</a></li>
+              <li><a href="#playstation-2">PlayStation 2</a></li>
+            </ul>
+          </nav>
+
+          <!-- Playstation 1-->
+          <section id="playstation-1">
+            <h3 class="subtitle">PlayStation</h3>
+            <div id="ps1-region-filter" class="btn-group">
+              <button
+                class="btn btn-default btn-ghost filter-btn"
+                data-filter="PAL"
+              >
+                PAL
+              </button>
+              <button
+                class="btn btn-default btn-ghost filter-btn"
+                data-filter="NTSC-U/C"
+              >
+                NTSC-U/C
+              </button>
+              <button
+                class="btn btn-default btn-ghost filter-btn"
+                data-filter="NTSC-J"
+              >
+                NTSC-J
+              </button>
+            </div>
+
+            <div class="table-container">
+              <table class="archive-table">
+                <thead>
+                  <tr>
+                    <th>Serial No.</th>
+                    <th>Title</th>
+                    <th>Region</th>
+                    <th date-type="date">Released</th>
+                    <th>Developer</th>
+                    <th>Publisher</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>SLES-00055</td>
+                    <td>Descent</td>
+                    <td>PAL</td>
+                    <td>1996.05.14</td>
+                    <td>Parallax Software</td>
+                    <td>Interplay</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-00132</td>
+                    <td>Doom</td>
+                    <td>PAL</td>
+                    <td>1995.11.16</td>
+                    <td>Williams Entertainment</td>
+                    <td>GT Interactive</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-00524</td>
+                    <td>Castlevania Symphony of the Night</td>
+                    <td>PAL</td>
+                    <td>1997.11.02</td>
+                    <td>Konami</td>
+                    <td>Konami</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-01156</td>
+                    <td>Diablo</td>
+                    <td>PAL</td>
+                    <td>1998.04.15</td>
+                    <td>Climax Studios (Blizzard Entertainment)</td>
+                    <td>Electronic Arts</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-01794</td>
+                    <td>Civilization II</td>
+                    <td>PAL</td>
+                    <td>1999.01.01</td>
+                    <td>Microprose</td>
+                    <td>Activision</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-02270</td>
+                    <td>Eternal Eyes</td>
+                    <td>PAL</td>
+                    <td>2000.11.22</td>
+                    <td>TamTam</td>
+                    <td>Sunsoft</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-02498</td>
+                    <td>Disney's 102 Dalmatians - Puppies to the Rescue</td>
+                    <td>PAL</td>
+                    <td>2000.12.08</td>
+                    <td>Crystal Dynamics</td>
+                    <td>Eidos Interactive</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-02914</td>
+                    <td>Digimon World</td>
+                    <td>PAL</td>
+                    <td>2000.06.30</td>
+                    <td>BEC (Bandai Entertainment Company)</td>
+                    <td>Bandai</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-03189</td>
+                    <td>Army Men - Air Attack</td>
+                    <td>PAL</td>
+                    <td>2000.08.10</td>
+                    <td>3DO</td>
+                    <td>3DO</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- PlayStation 2-->
+          <section id="playstation-2">
+            <h3 class="subtitle">PlayStation 2</h3>
+            <div id="ps1-region-filter" class="btn-group">
+              <button
+                class="btn btn-default btn-ghost filter-btn"
+                data-filter="PAL"
+              >
+                PAL
+              </button>
+              <button
+                class="btn btn-default btn-ghost filter-btn"
+                data-filter="NTSC-U/C"
+              >
+                NTSC-U/C
+              </button>
+              <button
+                class="btn btn-default btn-ghost filter-btn"
+                data-filter="NTSC-J"
+              >
+                NTSC-J
+              </button>
+            </div>
+
+            <div class="table-container">
+              <table class="archive-table">
+                <thead>
+                  <tr>
+                    <th>Serial No.</th>
+                    <th>Title</th>
+                    <th>Region</th>
+                    <th date-type="date">Released</th>
+                    <th>Developer</th>
+                    <th>Publisher</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </section>
         </section>
       </main>
 
