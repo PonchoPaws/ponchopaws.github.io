@@ -67,7 +67,6 @@
         width: 100%;
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
-        margin-bottom: 1rem;
       }
       table {
         width: 100%;
@@ -154,12 +153,12 @@
             navigation links below to quickly scroll to a specific system.
           </p>
 
-          <nav>
+          <div class="curved-nav-menu">
             <ul>
               <li><a href="#playstation-1">PlayStation</a></li>
               <li><a href="#playstation-2">PlayStation 2</a></li>
             </ul>
-          </nav>
+          </div>
 
           <!-- Playstation 1-->
           <section id="playstation-1">
@@ -186,13 +185,13 @@
             </div>
 
             <div class="table-container">
-              <table class="archive-table">
+              <table id="ps1-table" class="archive-table">
                 <thead>
                   <tr>
                     <th>Serial No.</th>
                     <th>Title</th>
                     <th>Region</th>
-                    <th date-type="date">Released</th>
+                    <th data-type="date">Released</th>
                     <th>Developer</th>
                     <th>Publisher</th>
                   </tr>
@@ -392,7 +391,7 @@
           <!-- PlayStation 2-->
           <section id="playstation-2">
             <h3 class="subtitle">PlayStation 2</h3>
-            <div id="ps1-region-filter" class="btn-group">
+            <div id="ps2-region-filter" class="btn-group">
               <button
                 class="btn btn-default btn-ghost filter-btn"
                 data-filter="PAL"
@@ -414,18 +413,27 @@
             </div>
 
             <div class="table-container">
-              <table class="archive-table">
+              <table id="ps2-table" class="archive-table">
                 <thead>
                   <tr>
                     <th>Serial No.</th>
                     <th>Title</th>
                     <th>Region</th>
-                    <th date-type="date">Released</th>
+                    <th data-type="date">Released</th>
                     <th>Developer</th>
                     <th>Publisher</th>
                   </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody>
+                  <tr>
+                    <td>SLES-54354</td>
+                    <td>Final Fantasy XII</td>
+                    <td>PAL</td>
+                    <td>2007.02.23</td>
+                    <td>Square Enix</td>
+                    <td>Square Enix</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </section>

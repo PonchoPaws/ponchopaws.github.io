@@ -59,6 +59,21 @@ section {
   padding: 0px 0px 10px 0px !important;
 }
 
+section section {
+  border-top: none;
+}
+
+.curved-nav-menu {
+  font-size: 0.75rem;
+  line-height: 15px;
+  text-align: left;
+  border-radius: 3px;
+  padding: 0px 10px;
+  li {
+    margin: 5px 0px;
+  }
+}
+
 h1,
 h2,
 h3,

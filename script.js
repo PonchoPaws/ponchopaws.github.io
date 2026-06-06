@@ -5,10 +5,8 @@ if (document.readyState === "loading") {
 }
 
 function initArchiveEngine() {
-  const tables = document.querySelectorAll(".archive-table");
-  const filterButtons = document.querySelectorAll(".filter-btn");
-
-  filterButtons.forEach((btn) => btn.setAttribute("data-active", "false"));
+  // Find all individual console sections (e.g., id="playstation-1", id="playstation-2")
+  const sections = document.querySelectorAll("section[id^='playstation-']");
 
   // ==========================================
   // GESTURE-AWARE SMART CLICK HANDLER
@@ -52,29 +50,47 @@ function initArchiveEngine() {
     });
   }
 
-  // ==========================================
-  // FEATURE 1: NATIVE TERMINAL.CSS BUTTON FILTER
-  // ==========================================
-  filterButtons.forEach((button) => {
-    bindSmartClick(button, () => {
-      const isAlreadyActive = button.getAttribute("data-active") === "true";
+  // Loop through each section independently to sandbox their states
+  sections.forEach((section) => {
+    // Scope filters and tables STRICTLY to this single system block
+    const filterButtons = section.querySelectorAll(".filter-btn");
+    const table = section.querySelector(".archive-table");
 
-      filterButtons.forEach((btn) => {
-        btn.setAttribute("data-active", "false");
-        btn.classList.remove("btn-tertiary");
-        btn.classList.add("btn-ghost");
-      });
+    // If a section is missing a table components setup, skip to avoid crashes
+    if (!table) return;
 
-      let activeFilter = null;
-      if (!isAlreadyActive) {
-        button.setAttribute("data-active", "true");
-        button.classList.remove("btn-ghost");
-        button.classList.add("btn-tertiary");
-        activeFilter = button.getAttribute("data-filter");
-      }
+    const headers = table.querySelectorAll("thead th");
+    const tbody = table.querySelector("tbody");
+    const originalTextContents = Array.from(headers).map((h) =>
+      h.textContent.trim(),
+    );
 
-      tables.forEach((table) => {
-        const rows = table.querySelectorAll("tbody tr");
+    filterButtons.forEach((btn) => btn.setAttribute("data-active", "false"));
+
+    // ==========================================
+    // FEATURE 1: SANDBOXED REGION BUTTON FILTER
+    // ==========================================
+    filterButtons.forEach((button) => {
+      bindSmartClick(button, () => {
+        const isAlreadyActive = button.getAttribute("data-active") === "true";
+
+        // Reset ONLY the buttons inside this specific system group
+        filterButtons.forEach((btn) => {
+          btn.setAttribute("data-active", "false");
+          btn.classList.remove("btn-tertiary");
+          btn.classList.add("btn-ghost");
+        });
+
+        let activeFilter = null;
+        if (!isAlreadyActive) {
+          button.setAttribute("data-active", "true");
+          button.classList.remove("btn-ghost");
+          button.classList.add("btn-tertiary");
+          activeFilter = button.getAttribute("data-filter");
+        }
+
+        // Apply row updates ONLY to this specific system table's rows
+        const rows = tbody.querySelectorAll("tr");
         rows.forEach((row) => {
           const rowRegion = row.cells[2].textContent.trim();
           if (activeFilter === null || rowRegion === activeFilter) {
@@ -85,24 +101,17 @@ function initArchiveEngine() {
         });
       });
     });
-  });
 
-  // ==========================================
-  // FEATURE 2: STABLE COLUMN SORT ENGINE
-  // ==========================================
-  tables.forEach((table) => {
-    const headers = table.querySelectorAll("thead th");
-    const tbody = table.querySelector("tbody");
-    const originalTextContents = Array.from(headers).map((h) =>
-      h.textContent.trim(),
-    );
-
+    // ==========================================
+    // FEATURE 2: SANDBOXED COLUMN SORT ENGINE
+    // ==========================================
     headers.forEach((header, index) => {
       bindSmartClick(header, () => {
         const rows = Array.from(tbody.querySelectorAll("tr"));
         const isDate = header.getAttribute("data-type") === "date";
         const setAsDescending = header.textContent.endsWith(" ▲");
 
+        // Clear arrows ONLY on this specific system's column headers
         headers.forEach((h, i) => {
           h.textContent = originalTextContents[i];
         });
