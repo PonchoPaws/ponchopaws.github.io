@@ -1,24 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
+// Safety handler: Initialize immediately if DOM is already fully painted (common on mobile)
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initArchiveEngine);
+} else {
+  initArchiveEngine();
+}
+
+function initArchiveEngine() {
   const tables = document.querySelectorAll(".archive-table");
   const filterButtons = document.querySelectorAll(".filter-btn");
 
+  // Initialize all buttons to an explicit string tracking state
+  filterButtons.forEach((btn) => btn.setAttribute("data-active", "false"));
+
   // ==========================================
-  // FEATURE 1: NATIVE TERMINAL.CSS BUTTON FILTER
+  // FEATURE 1: ROBUST MOBILE FILTER LOGIC
   // ==========================================
   filterButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      // In Terminal.css, if it doesn't have 'btn-ghost', it means it is highlighted/active
-      const isAlreadyActive = !button.classList.contains("btn-ghost");
+    button.addEventListener("click", (e) => {
+      // FIX: Mobile browsers handle raw attributes infinitely faster than CSS class lists
+      const isAlreadyActive = button.getAttribute("data-active") === "true";
 
-      // 1. RESET ALL BUTTONS: Force them all back to unhighlighted (ghost) states
+      // 1. RESET ALL BUTTONS: Force them all back to ghost status
       filterButtons.forEach((btn) => {
+        btn.setAttribute("data-active", "false");
         btn.classList.remove("btn-tertiary");
         btn.classList.add("btn-ghost");
       });
 
-      // 2. Evaluate target layout state
+      // 2. Evaluate target active filter profile
       let activeFilter = null;
       if (!isAlreadyActive) {
+        button.setAttribute("data-active", "true");
         button.classList.remove("btn-ghost");
         button.classList.add("btn-tertiary");
         activeFilter = button.getAttribute("data-filter");
@@ -29,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const rows = table.querySelectorAll("tbody tr");
 
         rows.forEach((row) => {
-          // Region data remains mapped to Column Index 2
           const rowRegion = row.cells[2].textContent.trim();
 
           if (activeFilter === null || rowRegion === activeFilter) {
@@ -104,4 +115,4 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-});
+}
