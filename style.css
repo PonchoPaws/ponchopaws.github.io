@@ -1,7 +1,7 @@
 :root {
-  --global-font-size: 15px;
-  --global-line-height: 1.3em;
-  --global-letter-spacing: -0.03em;
+  --global-font-size: 0.85em;
+  --global-line-height: 1.2em;
+  --global-letter-spacing: -0.05em;
   --global-space: 10px;
   --font-stack:
     "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono",
@@ -55,6 +55,7 @@ h5,
 h6,
 .logo {
   line-height: var(--global-line-height);
+  font-size: large;
 }
 
 a {
@@ -331,6 +332,7 @@ ol ol {
 
 .terminal-menu {
   width: 100%;
+  font-size: large;
 }
 
 .terminal-nav {
