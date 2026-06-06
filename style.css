@@ -1,6 +1,7 @@
 :root {
   --global-font-size: 15px;
-  --global-line-height: 1.4em;
+  --global-line-height: 1.3em;
+  --global-letter-spacing: -0.03em;
   --global-space: 10px;
   --font-stack:
     "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono",
@@ -9,7 +10,7 @@
     "Menlo", "Monaco", "Lucida Console", "Liberation Mono", "DejaVu Sans Mono",
     "Bitstream Vera Sans Mono", "Courier New", serif;
   --background-color: #f9f4eb;
-  --page-width: 80em;
+  --page-width: 70em;
   --font-color: #1e1e1e;
   --invert-font-color: #fff;
   --primary-color: #edc163;
@@ -39,6 +40,7 @@ body {
   font-size: var(--global-font-size);
   color: var(--font-color);
   line-height: var(--global-line-height);
+  letter-spacing: var(--global-letter-spacing);
   margin: 0;
   font-family: var(--font-stack);
   word-wrap: break-word;
