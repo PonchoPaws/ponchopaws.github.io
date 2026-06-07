@@ -1,110 +1,116 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oliver Paul Mitchell | Archive</title>
-    <link rel="stylesheet" href="/style.css" />
-    <style>
-      body {
-        padding: 20px;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oliver Paul Mitchell | Archive</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    article header {
+      border-top: solid 5px var(--tertiary-color);
+    }
+
+    .published-date {
+      background-color: var(--primary-color);
+      color: var(--invert-font-color);
+      padding: 6px 12px 6px 12px;
+      border-radius: 5px;
+      display: inline-block;
+      font-weight: bold;
+    }
+
+    .grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    @media screen and (max-width: 767px) {
+      .grid-cols-3 {
+        grid-template-columns: 1fr !important;
       }
-      .hidden {
-        display: none !important;
+    }
+
+    @media screen and (min-width: 768px) {
+      .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr) !important;
       }
-      article header {
-        border-top: solid 5px var(--tertiary-color);
-      }
-      .published-date {
-        background-color: var(--primary-color);
-        color: var(--invert-font-color);
-        padding: 6px 12px 6px 12px;
-        border-radius: 5px;
-        display: inline-block;
-        font-weight: bold;
-      }
-      .grid {
-        display: grid;
-        gap: 20px;
-      }
-      @media screen and (max-width: 767px) {
-        .grid-cols-3 {
-          grid-template-columns: 1fr !important;
-        }
-      }
-      @media screen and (min-width: 768px) {
-        .grid-cols-3 {
-          grid-template-columns: repeat(3, 1fr) !important;
-        }
-      }
-    </style>
-  </head>
-  <body class="terminal-body">
-    <div class="container">
-      <header class="terminal-nav">
-        <div class="terminal-logo">
-          <div class="logo terminal-prompt">
-            <a href="/index.html" class="no-style">user@oliverpaulmitchell:~</a>
+    }
+  </style>
+</head>
+
+<body class="terminal-body">
+  <div class="container">
+    <header class="terminal-nav">
+      <div class="terminal-logo">
+        <div class="logo terminal-prompt">
+          <a href="/index.html" class="no-style">user@oliverpaulmitchell:~</a>
+        </div>
+      </div>
+      <nav class="terminal-menu">
+        <ul>
+          <li><a class="menu-item" href="/index.html">/home</a></li>
+          <li><a class="menu-item" href="/logs.html">/logs</a></li>
+          <li>
+            <a class="menu-item active" href="/archive.html">/archive</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="game-info">
+        <h1 class="game-title">
+          <span class="serial-no">SLES-00524</span> Castlevania: Symphony of
+          the Night
+        </h1>
+
+        <div class="row">
+          <div class="column">
+            <img style="display: block"
+              src="https://cdn.mobygames.com/covers/7822448-castlevania-symphony-of-the-night-playstation-front-cover.jpg" />
+          </div>
+          <div class="column">
+            <fieldset class="info-box">
+              <legend>Blurb</legend>
+              <p>
+                The legend returns... having been awoken from his eternal
+                slumber by the reappearance of Castlevania, Alucard must once
+                again face the evil minions of darkness. Use your vampire
+                powers, along with weapons, potions and other magical relics
+                to change the tide of battle.
+              </p>
+              <br />
+              <p>
+                A mixture of platform and roleplaying action with many hidden
+                areas and secrets. Can you discover them all? The biggest and
+                best Castlevania adventure ever.
+              </p>
+            </fieldset>
           </div>
         </div>
-        <nav class="terminal-menu">
-          <ul>
-            <li><a class="menu-item" href="/index.html">/home</a></li>
-            <li><a class="menu-item" href="/logs.html">/logs</a></li>
-            <li>
-              <a class="menu-item active" href="/archive.html">/archive</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
 
-      <main>
-        <section id="game-info">
-          <h1 class="game-title">
-            <span class="serial-no">SLES-00524</span> Castlevania: Symphony of
-            the Night
-          </h1>
+        <a href="/archive.html">&lt;&lt; return.</a>
+      </section>
+    </main>
 
-          <div class="row">
-            <div class="column">
-              <img
-                style="display: block"
-                src="https://cdn.mobygames.com/covers/7822448-castlevania-symphony-of-the-night-playstation-front-cover.jpg"
-              />
-            </div>
-            <div class="column">
-              <div class="game-blurb">
-                <p>
-                  The legend returns... having been awoken from his eternal
-                  slumber by the reappearance of Castlevania, Alucard must once
-                  again face the evil minions of darkness. Use your vampire
-                  powers, along with weapons, potions and other magical relics
-                  to change the tide of battle.
-                </p>
-                <br />
-                <p>
-                  A mixture of platform and roleplaying action with many hidden
-                  areas and secrets. Can you discover them all? The biggest and
-                  best Castlevania adventure ever.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <a href="/archive.html">&lt;&lt; return.</a>
-        </section>
-      </main>
-
-      <footer
-        style="
+    <footer style="
           margin-top: 60px;
           text-align: center;
           font-size: 0.8rem;
           color: var(--secondary-color);
-        "
-      >
-        <p>© 2026 Oliver Mitchell.</p>
-      </footer>
-    </div>
-  </body>
+        ">
+      <p>© 2026 Oliver Mitchell.</p>
+    </footer>
+  </div>
+</body>
+
 </html>

@@ -110,15 +110,19 @@ h1.game-title {
   padding: 0px 10px;
 }
 
-.game-blurb {
+.info-box {
+  font-size: small;
   background-color: var(--darker-background-color);
   padding: 1em;
-  font-style: oblique;
   border-radius: 5px;
   border: solid 1px var(--secondary-color);
   p {
     margin: 0;
     color: var(--secondary-color);
+  }
+  legend {
+    padding: 0px 5px;
+    font-size: medium;
   }
 }
 
