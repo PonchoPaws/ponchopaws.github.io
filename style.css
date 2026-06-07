@@ -53,6 +53,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+  margin-bottom: 1em;
 }
 
 .column {
@@ -88,8 +89,7 @@ body {
 }
 
 section {
-  border-top: solid 5px var(--tertiary-color);
-  padding: 0px 0px 10px 0px !important;
+  border-top: solid 3px var(--secondary-color);
 }
 
 section section {
@@ -111,10 +111,11 @@ h1.game-title {
 }
 
 .info-box {
+  text-align: left;
   font-size: small;
   background-color: var(--darker-background-color);
   padding: 1em;
-  border-radius: 5px;
+  border-radius: 3px;
   border: solid 1px var(--secondary-color);
   p {
     margin: 0;
@@ -122,7 +123,7 @@ h1.game-title {
   }
   legend {
     padding: 0px 5px;
-    font-size: medium;
+    font-size: small;
   }
 }
 

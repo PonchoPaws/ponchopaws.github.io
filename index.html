@@ -15,40 +15,31 @@
       display: none !important;
     }
 
-    .game-card {
-      border-bottom: solid 10px var(--tertiary-color);
+    .terminal-card {
+      flex-grow: 1;
     }
 
-    .game-card header {
-      border-bottom: solid 1px var(--font-color);
-      background-color: var(--secondary-color);
-      color: var(--invert-font-color);
-      padding: 12px 0px;
-      font-weight: bold;
-      border-bottom: solid 10px var(--primary-color);
+    .terminal-card header {
+      text-align: center;
+      background-color: var(--darker-background-color);
+      color: var(--font-color);
+      border-bottom: solid 1px var(--secondary-color);
+      font-size: 11pt;
+      padding: 0.8em;
     }
 
-    .game-card header span {
-      padding: 5px 0px;
-      font-size: medium;
-      letter-spacing: -0.08em;
+    .terminal-card div p {
+      font-size: small;
+      text-align: left;
+      margin-top: 1em;
     }
 
-    .game-card img {
+    .terminal-card img {
       width: auto;
       height: auto;
       max-height: 240px;
       display: block;
       margin: 10px auto 20px auto;
-    }
-
-    .game-card figcaption {
-      margin-top: 10px;
-      text-align: left;
-    }
-
-    #first-impressions {
-      margin-top: 1em;
     }
 
     .grid {
@@ -115,11 +106,9 @@
           <!-- CURRENTLY PLAYING -->
           <h3 class="subtitle">Currently Playing</h3>
           <div class="grid grid-cols-3">
-            <div class="terminal-card game-card">
+            <div class="terminal-card">
               <header>
-                <div>
-                  <span>Breath of Fire IV</span>
-                </div>
+                <span>Breath of Fire IV</span>
               </header>
               <div>
                 <figure style="margin: 0">
@@ -131,7 +120,7 @@
                       <span><b>Released:</b> 2000</span><br />
                       <span><b>Developer / Publisher:</b> Capcom</span>
                     </div>
-                    <div id="first-impressions">
+                    <div>
                       <p>
                         I've never played this JRPG series and don't know much
                         about it. However, I was quickly drawn-in by the
@@ -160,11 +149,9 @@
               </div>
             </div>
 
-            <div class="terminal-card game-card">
+            <div class="terminal-card">
               <header>
-                <div>
-                  <span>Monster Hunter Freedom Unite</span>
-                </div>
+                <span>Monster Hunter Freedom Unite</span>
               </header>
               <div>
                 <figure style="margin: 0">
@@ -177,8 +164,7 @@
                       <span><b>Released:</b> 2008</span><br />
                       <span><b>Developer / Publisher:</b> Capcom</span>
                     </div>
-                    <div id="first-impressions">
-
+                    <div>
                       <p>
                         I'm a long-time fan of the Monster Hunter series since
                         being introduced to it with Monster Hunter Tri back on
@@ -197,11 +183,9 @@
               </div>
             </div>
 
-            <div class="terminal-card game-card">
+            <div class="terminal-card">
               <header>
-                <div>
-                  <span>Animal Crossing: Wild World</span>
-                </div>
+                <span>Animal Crossing: Wild World</span>
               </header>
               <div>
                 <figure style="margin: 0">
@@ -214,7 +198,7 @@
                       <span><b>Released:</b> 2005</span><br />
                       <span><b>Developer / Publisher:</b> Nintendo</span>
                     </div>
-                    <div id="first-impressions">
+                    <div>
                       <p>
                         This is a childhood favourite that I'm revisiting. I
                         have extremely fond memories of catching bugs and fish

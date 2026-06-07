@@ -44,6 +44,50 @@
         grid-template-columns: repeat(3, 1fr) !important;
       }
     }
+
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0em 0em 1em 0em;
+      font-size: 10pt;
+    }
+
+    tr td:first-child,
+    tr th:first-child {
+      background-color: var(--darker-background-color);
+      color: var(--font-color) !important;
+      font-weight: bold;
+      max-width: 300px;
+    }
+
+    th,
+    td {
+      padding: 8px;
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    .terminal-card {
+      flex-grow: 1;
+    }
+
+    .terminal-card header {
+      text-align: left;
+      padding: .5em .7em;
+      background-color: var(--darker-background-color);
+      color: var(--font-color);
+      border-bottom: solid 1px var(--secondary-color);
+    }
+
+    .terminal-card div p {
+      font-size: small;
+    }
   </style>
 </head>
 
@@ -67,38 +111,111 @@
     </header>
 
     <main>
-      <section id="game-info">
+      <section>
         <h1 class="game-title">
           <span class="serial-no">SLES-00524</span> Castlevania: Symphony of
           the Night
         </h1>
 
-        <div class="row">
-          <div class="column">
-            <img style="display: block"
-              src="https://cdn.mobygames.com/covers/7822448-castlevania-symphony-of-the-night-playstation-front-cover.jpg" />
-          </div>
-          <div class="column">
-            <fieldset class="info-box">
-              <legend>Blurb</legend>
-              <p>
-                The legend returns... having been awoken from his eternal
-                slumber by the reappearance of Castlevania, Alucard must once
-                again face the evil minions of darkness. Use your vampire
-                powers, along with weapons, potions and other magical relics
-                to change the tide of battle.
-              </p>
-              <br />
-              <p>
-                A mixture of platform and roleplaying action with many hidden
-                areas and secrets. Can you discover them all? The biggest and
-                best Castlevania adventure ever.
-              </p>
-            </fieldset>
-          </div>
-        </div>
+        <section id="game-info">
+          <h2 class="subtitle">Overview</h2>
 
-        <a href="/archive.html">&lt;&lt; return.</a>
+          <div class="row">
+            <div class="column">
+              <img style="display: block"
+                src="https://cdn.mobygames.com/covers/7822448-castlevania-symphony-of-the-night-playstation-front-cover.jpg" />
+            </div>
+            <div class="column">
+              <div class="table-container">
+
+                <table id="ps1-table" class="archive-table">
+                  <tbody>
+                    <tr>
+                      <td>Serial No.</td>
+                      <td>SLES-00524</td>
+                    </tr>
+                    <tr>
+                      <td>Title</td>
+                      <td>Castlevania: Symphony of the Night</td>
+                    </tr>
+                    <tr>
+                      <td>Region</td>
+                      <td>PAL</td>
+                    </tr>
+                    <tr>
+                      <td>Released</td>
+                      <td>1997.11.02</td>
+                    </tr>
+                    <tr>
+                      <td>Developer</td>
+                      <td>Konami</td>
+                    </tr>
+                    <tr>
+                      <td>Publisher</td>
+                      <td>Konami</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="terminal-card">
+                <header>
+                  <span>Back of the Box</span>
+                </header>
+                <div>
+                  <i>
+                    <p>
+                      The legend returns... having been awoken from his eternal
+                      slumber by the reappearance of Castlevania, Alucard must once
+                      again face the evil minions of darkness. Use your vampire
+                      powers, along with weapons, potions and other magical relics
+                      to change the tide of battle.
+                    </p>
+                    <p>
+                      The legend returns... having been awoken from his eternal
+                      slumber by the reappearance of Castlevania, Alucard must once
+                      again face the evil minions of darkness. Use your vampire
+                      powers, along with weapons, potions and other magical relics
+                      to change the tide of battle.
+                    </p>
+                  </i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="box-contents">
+          <h2 class="subtitle">Box Contents</h2>
+          <div class="row">
+            <div class="column">
+
+              <div class="terminal-card">
+                <header>
+                  <span></span>
+                </header>
+                <div>
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="terminal-card">
+                <header>
+                  <span></span>
+                </header>
+                <div>
+                  <p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+        <a href=" /archive.html">&lt;&lt; return.</a>
       </section>
     </main>
 
