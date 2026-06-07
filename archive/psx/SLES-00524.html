@@ -15,36 +15,6 @@
       display: none !important;
     }
 
-    article header {
-      border-top: solid 5px var(--tertiary-color);
-    }
-
-    .published-date {
-      background-color: var(--primary-color);
-      color: var(--invert-font-color);
-      padding: 6px 12px 6px 12px;
-      border-radius: 5px;
-      display: inline-block;
-      font-weight: bold;
-    }
-
-    .grid {
-      display: grid;
-      gap: 20px;
-    }
-
-    @media screen and (max-width: 767px) {
-      .grid-cols-3 {
-        grid-template-columns: 1fr !important;
-      }
-    }
-
-    @media screen and (min-width: 768px) {
-      .grid-cols-3 {
-        grid-template-columns: repeat(3, 1fr) !important;
-      }
-    }
-
     .table-container {
       width: 100%;
       overflow-x: auto;
@@ -84,7 +54,7 @@
 
     .terminal-card header {
       text-align: left;
-      padding: .5em .7em;
+      padding: 0.7em 0.5em 0.3em 0.5em;
       background-color: var(--darker-background-color);
       color: var(--font-color);
       border-bottom: solid 1px var(--secondary-color);
@@ -92,6 +62,41 @@
 
     .terminal-card div p {
       font-size: small;
+    }
+
+    .multi-list {
+      padding: 0;
+    }
+
+    .multi-list-row {
+      display: flex;
+      align-items: center;
+      gap: 0rem;
+      padding: 0;
+      border-bottom: 1px solid black;
+
+      div:first-child {
+        max-width: 200px;
+        min-width: 200px;
+        border-right: 1px solid black;
+        background-color: var(--darker-background-color);
+        font-weight: bold;
+      }
+
+      div {
+        padding: 0.5rem 0.7rem 0.2rem 0.5rem;
+      }
+    }
+
+    .multi-list-row:last-child {
+      border-bottom: none;
+    }
+
+    .terminal-card img {
+      width: auto;
+      height: auto;
+      display: block;
+      margin: 10px auto 20px auto;
     }
   </style>
 </head>
@@ -119,20 +124,16 @@
       <section>
         <h1 class="game-title">
           <span class="serial-no">SLES-00524</span> Castlevania: Symphony of
-          the Night
+          the Night (Limited Edition)
         </h1>
 
         <section id="game-info">
-          <h2 class="subtitle">Overview</h2>
-
           <div class="row">
             <div class="column">
-              <img
-                src="https://cdn.mobygames.com/covers/7822448-castlevania-symphony-of-the-night-playstation-front-cover.jpg" />
+              <img src="/archive/psx/SLES-00524-cover.jpg" />
             </div>
             <div class="column">
               <div class="table-container">
-
                 <table class="archive-table">
                   <tbody>
                     <tr>
@@ -159,10 +160,32 @@
                       <td>Publisher</td>
                       <td>Konami</td>
                     </tr>
+                    <tr>
+                      <td>Date Collected</td>
+                      <td>2025.09.06</td>
+                    </tr>
+                    <tr>
+                      <td>Price Paid</td>
+                      <td>£599.95</td>
+                    </tr>
+                    <tr>
+                      <td>Vendor</td>
+                      <td>eBay</td>
+                    </tr>
+                    <tr>
+                      <td>Condition</td>
+                      <td>Complete in Box</td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
+            </div>
+        </section>
 
+        <section id="box-contents">
+          <div class="row">
+            <div class="column">
+              <h2 class="subtitle">Overview</h2>
               <div class="terminal-card">
                 <header>
                   <span>Back of the Box</span>
@@ -177,14 +200,21 @@
                       to change the tide of battle.
                     </p>
                     <p>
-                      The legend returns... having been awoken from his eternal
-                      slumber by the reappearance of Castlevania, Alucard must once
-                      again face the evil minions of darkness. Use your vampire
-                      powers, along with weapons, potions and other magical relics
-                      to change the tide of battle.
+                      A mixture of platform and roleplaying action with many hidden areas and secrets. Can you discover
+                      them all?
                     </p>
                   </i>
                 </div>
+              </div>
+            </div>
+            <div class="column">
+              <h2 class="subtitle">My Articles</h2>
+              <p>I have not written any articles for this game yet.</p>
+              <div class="table-container">
+                <table class="archive-table">
+                  <tbody>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
@@ -192,35 +222,129 @@
 
         <section id="box-contents">
           <h2 class="subtitle">Box Contents</h2>
+          <p>A description of what manuals, inserts, discs/cartridges, and other items are contained in the game's box
+            and whether my
+            personal copy is complete.</p>
+          <div class="row">
+            <div class="table-container">
+              <table class="archive-table">
+                <tbody>
+                  <tr>
+                    <td>Front Insert</td>
+                    <td>Yes</td>
+                  </tr>
+                  <tr>
+                    <td>Rear Insert</td>
+                    <td>Yes</td>
+                  </tr>
+                  <tr>
+                  <tr>
+                    <td>Manual</td>
+                    <td>Yes</td>
+                  </tr>
+                  <td>Discs</td>
+                  <td class="multi-list">
+                    <div class="multi-list-row">
+                      <div>Game Disc</div>
+                      <div>Yes</div>
+                    </div>
+                    <div class="multi-list-row">
+                      <div>Castlevania Music Collection Disc</div>
+                      <div>Yes</div>
+                    </div>
+                  </td>
+                  </tr>
+                  <tr>
+                    <td>Inserts</td>
+                    <td class="multi-list">
+                      <div class="multi-list-row">
+                        <div>Illustrations & Comic</div>
+                        <div>Yes</div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
           <div class="row">
             <div class="column">
-
               <div class="terminal-card">
                 <header>
-                  <span></span>
+                  <span>Front Insert</span>
                 </header>
                 <div>
-                  <p>
-                  </p>
+                  <figure style="margin: 0">
+                    <img src="/coming-soon.png" />
+                  </figure>
                 </div>
               </div>
             </div>
             <div class="column">
               <div class="terminal-card">
                 <header>
-                  <span></span>
+                  <span>Rear Insert</span>
                 </header>
                 <div>
-                  <p>
-                  </p>
+                  <figure style="margin: 0">
+                    <img src="/coming-soon.png" />
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="terminal-card">
+                <header>
+                  <span>Manual</span>
+                </header>
+                <div>
+                  <figure style="margin: 0">
+                    <img src="/coming-soon.png" />
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <div class="terminal-card">
+                <header>
+                  <span>Game Disc</span>
+                </header>
+                <div>
+                  <figure style="margin: 0">
+                    <img src="/coming-soon.png" />
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="terminal-card">
+                <header>
+                  <span>Castlevania Music Collection Disc</span>
+                </header>
+                <div>
+                  <figure style="margin: 0">
+                    <img src="/coming-soon.png" />
+                  </figure>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="terminal-card">
+                <header>
+                  <span>Illustrations & Comic</span>
+                </header>
+                <div>
+                  <figure style="margin: 0">
+                    <img src="/coming-soon.png" />
+                  </figure>
                 </div>
               </div>
             </div>
           </div>
         </section>
-
-
-        <a href=" /archive.html">&lt;&lt; return.</a>
       </section>
     </main>
 
