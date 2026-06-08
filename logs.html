@@ -1,230 +1,237 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oliver Paul Mitchell | Logs</title>
-    <link rel="stylesheet" href="/style.css" />
-    <style>
-      body {
-        padding: 20px;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oliver Paul Mitchell | Logs</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    body {
+      padding: 20px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .read-more-link {
+      display: inline-block;
+      margin-top: 15px;
+    }
+
+    .terminal-timeline::before {
+      margin-left: 0px;
+      display: none;
+    }
+
+    .terminal-timeline .terminal-card::before {
+      margin-left: 0px;
+      display: none;
+    }
+
+    .terminal-timeline>fieldset.terminal-card::before {
+      display: none;
+    }
+
+    .terminal-timeline>fieldset.terminal-card {
+      border-bottom: 0;
+      border-left: 0;
+      border-right: 0;
+      border-width: 6px;
+      border-color: #bbbbbb;
+    }
+
+    .terminal-timeline>fieldset>legend {
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px;
+      font-size: larger;
+      font-weight: bold;
+    }
+
+    .terminal-timeline {
+      padding: 0px;
+    }
+
+    .terminal-timeline>fieldset {
+      padding: 0px;
+    }
+
+    .terminal-card header {
+      border-bottom: solid 10px var(--tertiary-color);
+      background-color: var(--secondary-color);
+    }
+
+    .terminal-card {
+      margin: 2px 0px 10px 0px !important;
+      padding: 0 !important;
+      border-bottom: solid 2px var(--secondary-color);
+    }
+
+    .terminal-card>header>div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+    .terminal-card>div {
+      overflow: auto;
+    }
+
+    .terminal-card>header>div>span:first-child {
+      padding-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    @media screen and (min-width: 768px) {
+      .terminal-timeline {
+        padding: 0px 40px;
       }
-      .hidden {
-        display: none !important;
-      }
-      .read-more-link {
-        display: inline-block;
-        margin-top: 15px;
-      }
+
       .terminal-timeline::before {
         margin-left: 0px;
-        display: none;
+        display: inline-block;
       }
+
       .terminal-timeline .terminal-card::before {
-        margin-left: 0px;
-        display: none;
-      }
-      .terminal-timeline > fieldset.terminal-card::before {
-        display: none;
-      }
-      .terminal-timeline > fieldset.terminal-card {
-        border-bottom: 0;
-        border-left: 0;
-        border-right: 0;
-        border-width: 6px;
-        border-color: #bbbbbb;
-      }
-      .terminal-timeline > fieldset > legend {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 10px;
-        font-size: larger;
-        font-weight: bold;
-      }
-      .terminal-timeline {
-        padding: 0px;
-      }
-      .terminal-timeline > fieldset {
-        padding: 0px;
-      }
-      .terminal-card header {
-        border-bottom: solid 10px var(--tertiary-color);
-        background-color: var(--secondary-color);
-      }
-      .terminal-card {
-        margin: 2px 0px 10px 0px !important;
-        padding: 0 !important;
-        border-bottom: solid 2px var(--secondary-color);
-      }
-      .terminal-card > header > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
-        width: 100%;
-      }
-      .terminal-card > div {
-        overflow: auto;
-      }
-      .terminal-card > header > div > span:first-child {
-        padding-left: 10px;
-        margin-bottom: 10px;
+        display: inline-block;
       }
 
-      @media screen and (min-width: 768px) {
-        .terminal-timeline {
-          padding: 0px 40px;
-        }
-        .terminal-timeline::before {
-          margin-left: 0px;
-          display: inline-block;
-        }
-        .terminal-timeline .terminal-card::before {
-          display: inline-block;
-        }
-
-        .terminal-card p {
-          margin-bottom: 0;
-        }
-
-        .terminal-card > header > div {
-          flex-direction: row;
-          align-items: center;
-        }
-
-        .terminal-card > header > div > span:first-child {
-          padding-bottom: 0;
-          margin-bottom: 0;
-        }
-
-        .terminal-card > header > div > span:last-child {
-          padding-left: 15px;
-        }
+      .terminal-card p {
+        margin-bottom: 0;
       }
-      .terminal-card span.card-date {
-        margin-left: 10px;
-        font-size: 1.1em;
-        color: #bbbbbb;
+
+      .terminal-card>header>div {
+        flex-direction: row;
+        align-items: center;
       }
-      .terminal-card a.card-title {
-        color: var(--invert-font-color);
-        margin-left: 10px;
-        text-align: left;
-        font-size: 1.1em;
-        padding: 0.4em;
+
+      .terminal-card>header>div>span:first-child {
+        padding-bottom: 0;
+        margin-bottom: 0;
       }
-      .terminal-card-img {
-        float: right;
-        width: 150px;
-        max-width: 35%;
-        height: auto;
-        margin-left: 20px;
-        margin-bottom: 15px;
+
+      .terminal-card>header>div>span:last-child {
+        padding-left: 15px;
       }
-    </style>
-  </head>
-  <body class="terminal-body">
-    <div class="container">
-      <header class="terminal-nav">
-        <div class="terminal-logo">
-          <div class="logo terminal-prompt">
-            <a href="/index.html" class="no-style">user@oliverpaulmitchell:~</a>
-          </div>
+    }
+
+    .terminal-card span.card-date {
+      margin-left: 10px;
+      font-size: 1.1em;
+      color: #bbbbbb;
+    }
+
+    .terminal-card a.card-title {
+      color: var(--invert-font-color);
+      margin-left: 10px;
+      text-align: left;
+      font-size: 1.1em;
+      padding: 0.4em;
+    }
+
+    .terminal-card-img {
+      float: right;
+      width: 150px;
+      max-width: 35%;
+      height: auto;
+      margin-left: 20px;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+
+<body class="terminal-body">
+  <div class="container">
+    <header class="terminal-nav">
+      <div class="terminal-logo">
+        <div class="logo terminal-prompt">
+          <a href="/index.html" class="no-style">user@oliverpaulmitchell:~</a>
         </div>
-        <nav class="terminal-menu">
-          <ul>
-            <li><a class="menu-item" href="/index.html">/home</a></li>
-            <li><a class="menu-item active" href="/logs.html">/logs</a></li>
-            <li><a class="menu-item" href="/archive.html">/archive</a></li>
-          </ul>
-        </nav>
-      </header>
+      </div>
+      <nav class="terminal-menu">
+        <ul>
+          <li><a class="menu-item" href="/index.html">/home</a></li>
+          <li><a class="menu-item active" href="/logs.html">/logs</a></li>
+          <li><a class="menu-item" href="/archive.html">/archive</a></li>
+          <li><a class="menu-item" href="/misc.html">/misc</a></li>
+        </ul>
+      </nav>
+    </header>
 
-      <main>
-        <section id="logs">
-          <h1>~/logs</h1>
-          <p>A chronological series of various random posts.</p>
-          <section id="timelime">
-            <div class="terminal-timeline">
-              <!-- 2026 -->
-              <div id="2026" style="margin-bottom: 20px">
-                <!-- June -->
-                <h3 class="subtitle">June 2026</h3>
-                <div class="terminal-card">
-                  <header>
-                    <div>
-                      <span class="card-date">2026.06.03 //</span>
-                      <a
-                        class="card-title"
-                        href="logs/female-house-sparrow.html"
-                        >Female House Sparrow</a
-                      >
-                    </div>
-                  </header>
+    <main>
+      <section id="logs">
+        <h1>~/logs</h1>
+        <p>A chronological series of various random posts.</p>
+        <section id="timelime">
+          <div class="terminal-timeline">
+            <!-- 2026 -->
+            <div id="2026" style="margin-bottom: 20px">
+              <!-- June -->
+              <h3 class="subtitle">June 2026</h3>
+              <div class="terminal-card">
+                <header>
                   <div>
-                    <p>
-                      I haven't had much time to do any photography since my
-                      daughter was born, but I managed to snap this quick shot
-                      from my kitchen. I've started just keeping my camera on
-                      the window in there so that I can grab it if I spot
-                      anything on the feeders.
-                    </p>
-                    <a
-                      class="read-more-link"
-                      href="logs/female-house-sparrow.html"
-                      >&gt; open</a
-                    >
+                    <span class="card-date">2026.06.03 //</span>
+                    <a class="card-title" href="logs/female-house-sparrow.html">Female House Sparrow</a>
                   </div>
-                </div>
-              </div>
-
-              <!-- 2025 -->
-              <div id="2025" style="margin-bottom: 20px">
-                <!-- January -->
-                <h3 class="subtitle">January 2025</h3>
-                <div class="terminal-card">
-                  <header>
-                    <div>
-                      <span class="card-date">2025.01.01 //</span>
-                      <a
-                        class="card-title"
-                        href="logs/learning-photography-with-the-panasonic-lumix-g9.html"
-                        >Learning Photography with Panasonic Lumix G9</a
-                      >
-                    </div>
-                  </header>
-                  <div>
-                    <p>
-                      For me, the Lumix G9’s light weight makes up for the
-                      drawbacks inherent to the MFT system. If I’m working from
-                      home, I often sling the G9 over my shoulder during a lunch
-                      break and try and capture wildlife in the woodlands near
-                      my house.
-                    </p>
-                    <a
-                      class="read-more-link"
-                      href="logs/learning-photography-with-the-panasonic-lumix-g9.html"
-                      >&gt; open</a
-                    >
-                  </div>
+                </header>
+                <div>
+                  <p>
+                    I haven't had much time to do any photography since my
+                    daughter was born, but I managed to snap this quick shot
+                    from my kitchen. I've started just keeping my camera on
+                    the window in there so that I can grab it if I spot
+                    anything on the feeders.
+                  </p>
+                  <a class="read-more-link" href="logs/female-house-sparrow.html">&gt; open</a>
                 </div>
               </div>
             </div>
-          </section>
-        </section>
-      </main>
 
-      <footer
-        style="
+            <!-- 2025 -->
+            <div id="2025" style="margin-bottom: 20px">
+              <!-- January -->
+              <h3 class="subtitle">January 2025</h3>
+              <div class="terminal-card">
+                <header>
+                  <div>
+                    <span class="card-date">2025.01.01 //</span>
+                    <a class="card-title" href="logs/learning-photography-with-the-panasonic-lumix-g9.html">Learning
+                      Photography with Panasonic Lumix G9</a>
+                  </div>
+                </header>
+                <div>
+                  <p>
+                    For me, the Lumix G9’s light weight makes up for the
+                    drawbacks inherent to the MFT system. If I’m working from
+                    home, I often sling the G9 over my shoulder during a lunch
+                    break and try and capture wildlife in the woodlands near
+                    my house.
+                  </p>
+                  <a class="read-more-link" href="logs/learning-photography-with-the-panasonic-lumix-g9.html">&gt;
+                    open</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer style="
           margin-top: 60px;
           text-align: center;
           font-size: 0.8rem;
           color: var(--secondary-color);
-        "
-      >
-        <p>© 2026 Oliver Mitchell.</p>
-      </footer>
-    </div>
-    <script src="script.js"></script>
-  </body>
+        ">
+      <p>© 2026 Oliver Mitchell.</p>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>

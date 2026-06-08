@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oliver Paul Mitchell | Misc</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      padding: 20px;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10pt;
+    }
+
+    th {
+      background-color: var(--secondary-color);
+      color: var(--invert-font-color)
+    }
+
+    th,
+    td {
+      color: var(--font-color) !important;
+      padding: 8px;
+      text-align: left;
+      border: 1px solid #ccc;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+
+<body class="terminal-body">
+  <div class="container">
+    <header class="terminal-nav">
+      <div class="terminal-logo">
+        <div class="logo terminal-prompt">
+          <a href="/index.html" class="no-style">user@oliverpaulmitchell:~</a>
+        </div>
+      </div>
+      <nav class="terminal-menu">
+        <ul>
+          <li><a class="menu-item" href="/index.html">/home</a></li>
+          <li><a class="menu-item" href="/logs.html">/logs</a></li>
+          <li>
+            <a class="menu-item" href="/archive.html">/archive</a>
+          </li>
+          <li><a class="menu-item active" href="/misc.html">/misc</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="misc">
+        <h1>~/misc</h1>
+        <p>
+          Miscellaneous things I get up to.
+        </p>
+
+        <section id="photography">
+          <h3 class="subtitle">Photography</h3>
+          <ul>
+            <li><a href="/misc/photography/birding.html">Birding</a></li>
+          </ul>
+          <!-- <div class="table-container">
+            <table class="archive-table">
+              <tbody>
+              </tbody>
+            </table>
+          </div> -->
+        </section>
+      </section>
+    </main>
+
+    <footer style="
+          margin-top: 60px;
+          text-align: center;
+          font-size: 0.8rem;
+          color: var(--secondary-color);
+        ">
+      <p>© 2026 Oliver Mitchell.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
