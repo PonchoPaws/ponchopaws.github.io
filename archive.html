@@ -1,460 +1,483 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Oliver Paul Mitchell | Archive</title>
-  <link rel="stylesheet" href="/style.css" />
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      padding: 20px;
-    }
-
-    .hidden {
-      display: none !important;
-    }
-
-    .game-card {
-      border-bottom: solid 10px var(--tertiary-color);
-    }
-
-    .game-card header {
-      border-bottom: solid 1px var(--font-color);
-      padding-bottom: 10px;
-      background-color: var(--background-color);
-      color: var(--font-color);
-      font-weight: bold;
-    }
-
-    .game-card header span {
-      padding: 5px 5px;
-      font-size: small;
-    }
-
-    .game-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .game-card figcaption {
-      margin-top: 10px;
-      font-size: 0.85rem;
-      line-height: 15px;
-      text-align: left;
-    }
-
-    .game-card #game-info {
-      margin-bottom: 10px;
-      font-size: 0.75rem;
-      line-height: 15px;
-      text-align: left;
-      background-color: #dedede;
-      border-radius: 3px;
-      padding: 10px;
-    }
-
-    .grid {
-      display: grid;
-      gap: 20px;
-    }
-
-    @media screen and (max-width: 767px) {
-      .grid-cols-3 {
-        grid-template-columns: 1fr !important;
-      }
-    }
-
-    @media screen and (min-width: 768px) {
-      .grid-cols-3 {
-        grid-template-columns: repeat(3, 1fr) !important;
-      }
-    }
-
-    .table-container {
-      width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 10pt;
-    }
-
-    th {
-      background-color: var(--secondary-color);
-      color: var(--invert-font-color)
-    }
-
-    th,
-    td {
-      padding: 8px;
-      text-align: left;
-      border: 1px solid #ccc;
-      white-space: nowrap;
-    }
-
-    th:nth-child(2),
-    td:nth-child(2) {
-      white-space: normal;
-      min-width: 150px;
-      max-width: 300px;
-    }
-
-    th:nth-child(5),
-    td:nth-child(5),
-    th:nth-child(6),
-    td:nth-child(6),
-    th:nth-child(7),
-    td:nth-child(7) {
-      white-space: normal;
-      min-width: 100px;
-      max-width: 200px;
-    }
-
-    .archive-table thead th {
-      cursor: pointer;
-      user-select: none;
-      padding-right: 20px;
-      position: relative;
-    }
-
-    .archive-table thead th:hover {
-      background-color: var(--primary-color, #fff);
-      color: #000;
-    }
-
-    @media (max-width: 600px) {
-      .btn-group {
-        display: flex !important;
-        flex-direction: column;/ width: 100%;
-        gap: 5px;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oliver Paul Mitchell | Archive</title>
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      html {
+        scroll-behavior: smooth;
       }
 
-      .btn-group .btn {
-        width: 100% !important;
-        margin: 0 !important;
-        border-radius: 0 !important;
-        text-align: center;
+      body {
+        padding: 20px;
       }
-    }
-  </style>
-</head>
 
-<body class="terminal-body">
-  <div class="container">
-    <header class="terminal-nav">
-      <div class="terminal-logo">
-        <div class="logo terminal-prompt">
-          <a href="/index.html" class="no-style">user@oliverpaulmitchell:~</a>
+      .hidden {
+        display: none !important;
+      }
+
+      .game-card {
+        border-bottom: solid 10px var(--tertiary-color);
+      }
+
+      .game-card header {
+        border-bottom: solid 1px var(--font-color);
+        padding-bottom: 10px;
+        background-color: var(--background-color);
+        color: var(--font-color);
+        font-weight: bold;
+      }
+
+      .game-card header span {
+        padding: 5px 5px;
+        font-size: small;
+      }
+
+      .game-card img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .game-card figcaption {
+        margin-top: 10px;
+        font-size: 0.85rem;
+        line-height: 15px;
+        text-align: left;
+      }
+
+      .game-card #game-info {
+        margin-bottom: 10px;
+        font-size: 0.75rem;
+        line-height: 15px;
+        text-align: left;
+        background-color: #dedede;
+        border-radius: 3px;
+        padding: 10px;
+      }
+
+      .grid {
+        display: grid;
+        gap: 20px;
+      }
+
+      @media screen and (max-width: 767px) {
+        .grid-cols-3 {
+          grid-template-columns: 1fr !important;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        .grid-cols-3 {
+          grid-template-columns: repeat(3, 1fr) !important;
+        }
+      }
+
+      .table-container {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 10pt;
+      }
+
+      th {
+        background-color: var(--secondary-color);
+        color: var(--invert-font-color);
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border: 1px solid #ccc;
+        white-space: nowrap;
+      }
+
+      th:nth-child(2),
+      td:nth-child(2) {
+        white-space: normal;
+        min-width: 150px;
+        max-width: 300px;
+      }
+
+      th:nth-child(5),
+      td:nth-child(5),
+      th:nth-child(6),
+      td:nth-child(6),
+      th:nth-child(7),
+      td:nth-child(7) {
+        white-space: normal;
+        min-width: 100px;
+        max-width: 200px;
+      }
+
+      .archive-table thead th {
+        cursor: pointer;
+        user-select: none;
+        padding-right: 20px;
+        position: relative;
+      }
+
+      .archive-table thead th:hover {
+        background-color: var(--primary-color, #fff);
+        color: #000;
+      }
+
+      @media (max-width: 600px) {
+        .btn-group {
+          display: flex !important;
+          flex-direction: column;
+          width: 100%;
+          gap: 5px;
+        }
+
+        .btn-group .btn {
+          width: 100% !important;
+          margin: 0 !important;
+          border-radius: 0 !important;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="terminal-body">
+    <div class="container">
+      <header class="terminal-nav">
+        <div class="terminal-logo">
+          <div class="logo terminal-prompt">
+            <a href="/index.html" class="no-style">user@oliverpaulmitchell:~</a>
+          </div>
         </div>
-      </div>
-      <nav class="terminal-menu">
-        <ul>
-          <li><a class="menu-item" href="/index.html">/home</a></li>
-          <li><a class="menu-item" href="/logs.html">/logs</a></li>
-          <li>
-            <a class="menu-item active" href="/archive.html">/archive</a>
-          </li>
-          <li><a class="menu-item" href="/misc.html">/misc</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section id="archive">
-        <h1>~/archive</h1>
-        <p>
-          This page records all physical video games in my collection. Use the
-          navigation links below to quickly scroll to a specific system.
-        </p>
-
-        <div class="curved-nav-menu">
+        <nav class="terminal-menu">
           <ul>
-            <li><a href="#playstation-1">PlayStation</a></li>
-            <li><a href="#playstation-2">PlayStation 2</a></li>
+            <li><a class="menu-item" href="/index.html">/home</a></li>
+            <li><a class="menu-item" href="/logs.html">/logs</a></li>
+            <li>
+              <a class="menu-item active" href="/archive.html">/archive</a>
+            </li>
+            <li><a class="menu-item" href="/misc.html">/misc</a></li>
           </ul>
-        </div>
+        </nav>
+      </header>
+      <main>
+        <section id="archive">
+          <h1>~/archive</h1>
+          <p>
+            This page records all physical video games in my collection. Use the
+            navigation links below to quickly scroll to a specific system.
+          </p>
 
-        <!-- Playstation 1-->
-        <section id="playstation-1">
-          <h3 class="subtitle">PlayStation</h3>
-          <div id="ps1-region-filter" class="btn-group">
-            <button class="btn btn-default btn-ghost filter-btn" data-filter="PAL">
-              PAL
-            </button>
-            <button class="btn btn-default btn-ghost filter-btn" data-filter="NTSC-U/C">
-              NTSC-U/C
-            </button>
-            <button class="btn btn-default btn-ghost filter-btn" data-filter="NTSC-J">
-              NTSC-J
-            </button>
+          <div class="curved-nav-menu">
+            <ul>
+              <li><a href="#playstation-1">PlayStation</a></li>
+              <li><a href="#playstation-2">PlayStation 2</a></li>
+            </ul>
           </div>
 
-          <div class="table-container">
-            <table id="ps1-table" class="archive-table">
-              <thead>
-                <tr>
-                  <th>Serial No.</th>
-                  <th>Title</th>
-                  <th>Region</th>
-                  <th data-type="date">Released</th>
-                  <th>Developer</th>
-                  <th>Publisher</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>SLES-00055</td>
-                  <td>Descent</td>
-                  <td>PAL</td>
-                  <td>1996.05.14</td>
-                  <td>Parallax Software</td>
-                  <td>Interplay</td>
-                </tr>
-                <tr>
-                  <td>SLES-00132</td>
-                  <td>Doom</td>
-                  <td>PAL</td>
-                  <td>1995.11.16</td>
-                  <td>Williams Entertainment</td>
-                  <td>GT Interactive</td>
-                </tr>
-                <tr>
-                  <td>SLES-00298</td>
-                  <td>Formula 1</td>
-                  <td>PAL</td>
-                  <td>1996.09.15</td>
-                  <td>Bizarre Creations</td>
-                  <td>Psygnosis</td>
-                </tr>
-                <tr>
-                  <td>
-                    <a href="/archive/psx/SLES-00524.html">SLES-00524</a>
-                  </td>
-                  <td>Castlevania: Symphony of the Night (Limited Edition)</td>
-                  <td>PAL</td>
-                  <td>1997.11.02</td>
-                  <td>Konami</td>
-                  <td>Konami</td>
-                </tr>
-                <tr>
-                  <td>SCES-00867</td>
-                  <td>Final Fantasy VII</td>
-                  <td>PAL</td>
-                  <td>1997.11.14</td>
-                  <td>Squaresoft</td>
-                  <td>Sony</td>
-                </tr>
-                <tr>
-                  <td>SLES-00903</td>
-                  <td>The Lost World - Jurassic Park</td>
-                  <td>PAL</td>
-                  <td>1998.09.15</td>
-                  <td>Dreamworks Interactive</td>
-                  <td>Electronic Arts</td>
-                </tr>
-                <tr>
-                  <td>SCES-00984</td>
-                  <td>Gran Turismo</td>
-                  <td>PAL</td>
-                  <td>1998.05.10</td>
-                  <td>Sony (Polys Entertainment)</td>
-                  <td>Sony</td>
-                </tr>
-                <tr>
-                  <td>SCES-01107</td>
-                  <td>The Granstream Saga</td>
-                  <td>PAL</td>
-                  <td>1998.11.20</td>
-                  <td>Shade</td>
-                  <td>Sony</td>
-                </tr>
-                <tr>
-                  <td>SLES-01156</td>
-                  <td>Diablo</td>
-                  <td>PAL</td>
-                  <td>1998.04.15</td>
-                  <td>Climax Studios (Blizzard Entertainment)</td>
-                  <td>Electronic Arts</td>
-                </tr>
-                <tr>
-                  <td>SLES-01710</td>
-                  <td>Legend of Kartia</td>
-                  <td>PAL</td>
-                  <td>1999.10.1</td>
-                  <td>Atlus</td>
-                  <td>Konami</td>
-                </tr>
-                <tr>
-                  <td>SLES-01794</td>
-                  <td>Civilization II</td>
-                  <td>PAL</td>
-                  <td>1999.01.01</td>
-                  <td>Microprose</td>
-                  <td>Activision</td>
-                </tr>
-                <tr>
-                  <td>SLES-02080</td>
-                  <td>Final Fantasy VIII</td>
-                  <td>PAL</td>
-                  <td>1999.10.27</td>
-                  <td>Squaresoft</td>
-                  <td>Squaresoft</td>
-                </tr>
-                <tr>
-                  <td>SLES-02201</td>
-                  <td>Jade Cocoon - Story of the Tamamayu</td>
-                  <td>PAL</td>
-                  <td>1998.11.30</td>
-                  <td>Genki</td>
-                  <td>Crave Entertainment</td>
-                </tr>
-                <tr>
-                  <td>SLES-02270</td>
-                  <td>Eternal Eyes</td>
-                  <td>PAL</td>
-                  <td>2000.11.22</td>
-                  <td>TamTam</td>
-                  <td>Sunsoft</td>
-                </tr>
-                <tr>
-                  <td>SLES-02498</td>
-                  <td>Disney's 102 Dalmatians - Puppies to the Rescue</td>
-                  <td>PAL</td>
-                  <td>2000.12.08</td>
-                  <td>Crystal Dynamics</td>
-                  <td>Eidos Interactive</td>
-                </tr>
-                <tr>
-                  <td>SLES-02694</td>
-                  <td>London Racer</td>
-                  <td>PAL</td>
-                  <td>2000.09.29</td>
-                  <td>Davilex</td>
-                  <td>Davilex</td>
-                </tr>
-                <tr>
-                  <td>SLES-02897</td>
-                  <td>Koudelka</td>
-                  <td>PAL</td>
-                  <td>2000.09.29</td>
-                  <td>Sacnoth</td>
-                  <td>Infogrames</td>
-                </tr>
-                <tr>
-                  <td>SLES-02914</td>
-                  <td>Digimon World</td>
-                  <td>PAL</td>
-                  <td>2000.06.30</td>
-                  <td>BEC (Bandai Entertainment Company)</td>
-                  <td>Bandai</td>
-                </tr>
-                <tr>
-                  <td>SLES-02965</td>
-                  <td>Final Fantasy IX</td>
-                  <td>PAL</td>
-                  <td>2001.02.16</td>
-                  <td>Squaresoft</td>
-                  <td>Squaresoft</td>
-                </tr>
-                <tr>
-                  <td>SLES-03189</td>
-                  <td>Army Men - Air Attack</td>
-                  <td>PAL</td>
-                  <td>2000.08.10</td>
-                  <td>3DO</td>
-                  <td>3DO</td>
-                </tr>
-                <tr>
-                  <td>SCES-03828</td>
-                  <td>Final Fantasy VI</td>
-                  <td>PAL</td>
-                  <td>2002.03.01</td>
-                  <td>Squaresoft</td>
-                  <td>Sony</td>
-                </tr>
-                <tr>
-                  <td>SCES-03840</td>
-                  <td>Final Fantasy Anthology</td>
-                  <td>PAL</td>
-                  <td>2002.01.15</td>
-                  <td>Squaresoft</td>
-                  <td>Sony</td>
-                </tr>
-                <tr>
-                  <td>SLES-04034</td>
-                  <td>Final Fantasy Origins</td>
-                  <td>PAL</td>
-                  <td>2003.08.14</td>
-                  <td>Squaresoft</td>
-                  <td>Infogrames</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+          <!-- Playstation 1-->
+          <section id="playstation-1">
+            <h3 class="subtitle">PlayStation</h3>
+            <div id="ps1-region-filter" class="btn-group">
+              <button
+                class="btn btn-default btn-ghost filter-btn"
+                data-filter="PAL"
+              >
+                PAL
+              </button>
+              <button
+                class="btn btn-default btn-ghost filter-btn"
+                data-filter="NTSC-U/C"
+              >
+                NTSC-U/C
+              </button>
+              <button
+                class="btn btn-default btn-ghost filter-btn"
+                data-filter="NTSC-J"
+              >
+                NTSC-J
+              </button>
+            </div>
+
+            <div class="table-container">
+              <table id="ps1-table" class="archive-table">
+                <thead>
+                  <tr>
+                    <th>Serial No.</th>
+                    <th>Title</th>
+                    <th>Region</th>
+                    <th data-type="date">Released</th>
+                    <th>Developer</th>
+                    <th>Publisher</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>SLES-00055</td>
+                    <td>Descent</td>
+                    <td>PAL</td>
+                    <td>1996.05.14</td>
+                    <td>Parallax Software</td>
+                    <td>Interplay</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-00132</td>
+                    <td>Doom</td>
+                    <td>PAL</td>
+                    <td>1995.11.16</td>
+                    <td>Williams Entertainment</td>
+                    <td>GT Interactive</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-00298</td>
+                    <td>Formula 1</td>
+                    <td>PAL</td>
+                    <td>1996.09.15</td>
+                    <td>Bizarre Creations</td>
+                    <td>Psygnosis</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/archive/psx/SLES-00524.html">SLES-00524</a>
+                    </td>
+                    <td>
+                      Castlevania: Symphony of the Night (Limited Edition)
+                    </td>
+                    <td>PAL</td>
+                    <td>1997.11.02</td>
+                    <td>Konami</td>
+                    <td>Konami</td>
+                  </tr>
+                  <tr>
+                    <td>SCES-00867</td>
+                    <td>Final Fantasy VII</td>
+                    <td>PAL</td>
+                    <td>1997.11.14</td>
+                    <td>Squaresoft</td>
+                    <td>Sony</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-00903</td>
+                    <td>The Lost World - Jurassic Park</td>
+                    <td>PAL</td>
+                    <td>1998.09.15</td>
+                    <td>Dreamworks Interactive</td>
+                    <td>Electronic Arts</td>
+                  </tr>
+                  <tr>
+                    <td>SCES-00984</td>
+                    <td>Gran Turismo</td>
+                    <td>PAL</td>
+                    <td>1998.05.10</td>
+                    <td>Sony (Polys Entertainment)</td>
+                    <td>Sony</td>
+                  </tr>
+                  <tr>
+                    <td>SCES-01107</td>
+                    <td>The Granstream Saga</td>
+                    <td>PAL</td>
+                    <td>1998.11.20</td>
+                    <td>Shade</td>
+                    <td>Sony</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <a href="/archive/psx/SLES-01156.html">SLES-01156</a>
+                    </td>
+                    <td>Diablo</td>
+                    <td>PAL</td>
+                    <td>1998.04.15</td>
+                    <td>Climax Studios (Blizzard Entertainment)</td>
+                    <td>Electronic Arts</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-01710</td>
+                    <td>Legend of Kartia</td>
+                    <td>PAL</td>
+                    <td>1999.10.1</td>
+                    <td>Atlus</td>
+                    <td>Konami</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-01794</td>
+                    <td>Civilization II</td>
+                    <td>PAL</td>
+                    <td>1999.01.01</td>
+                    <td>Microprose</td>
+                    <td>Activision</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-02080</td>
+                    <td>Final Fantasy VIII</td>
+                    <td>PAL</td>
+                    <td>1999.10.27</td>
+                    <td>Squaresoft</td>
+                    <td>Squaresoft</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-02201</td>
+                    <td>Jade Cocoon - Story of the Tamamayu</td>
+                    <td>PAL</td>
+                    <td>1998.11.30</td>
+                    <td>Genki</td>
+                    <td>Crave Entertainment</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-02270</td>
+                    <td>Eternal Eyes</td>
+                    <td>PAL</td>
+                    <td>2000.11.22</td>
+                    <td>TamTam</td>
+                    <td>Sunsoft</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-02498</td>
+                    <td>Disney's 102 Dalmatians - Puppies to the Rescue</td>
+                    <td>PAL</td>
+                    <td>2000.12.08</td>
+                    <td>Crystal Dynamics</td>
+                    <td>Eidos Interactive</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-02694</td>
+                    <td>London Racer</td>
+                    <td>PAL</td>
+                    <td>2000.09.29</td>
+                    <td>Davilex</td>
+                    <td>Davilex</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-02897</td>
+                    <td>Koudelka</td>
+                    <td>PAL</td>
+                    <td>2000.09.29</td>
+                    <td>Sacnoth</td>
+                    <td>Infogrames</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-02914</td>
+                    <td>Digimon World</td>
+                    <td>PAL</td>
+                    <td>2000.06.30</td>
+                    <td>BEC (Bandai Entertainment Company)</td>
+                    <td>Bandai</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-02965</td>
+                    <td>Final Fantasy IX</td>
+                    <td>PAL</td>
+                    <td>2001.02.16</td>
+                    <td>Squaresoft</td>
+                    <td>Squaresoft</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-03189</td>
+                    <td>Army Men - Air Attack</td>
+                    <td>PAL</td>
+                    <td>2000.08.10</td>
+                    <td>3DO</td>
+                    <td>3DO</td>
+                  </tr>
+                  <tr>
+                    <td>SCES-03828</td>
+                    <td>Final Fantasy VI</td>
+                    <td>PAL</td>
+                    <td>2002.03.01</td>
+                    <td>Squaresoft</td>
+                    <td>Sony</td>
+                  </tr>
+                  <tr>
+                    <td>SCES-03840</td>
+                    <td>Final Fantasy Anthology</td>
+                    <td>PAL</td>
+                    <td>2002.01.15</td>
+                    <td>Squaresoft</td>
+                    <td>Sony</td>
+                  </tr>
+                  <tr>
+                    <td>SLES-04034</td>
+                    <td>Final Fantasy Origins</td>
+                    <td>PAL</td>
+                    <td>2003.08.14</td>
+                    <td>Squaresoft</td>
+                    <td>Infogrames</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- PlayStation 2-->
+          <section id="playstation-2">
+            <h3 class="subtitle">PlayStation 2</h3>
+            <div id="ps2-region-filter" class="btn-group">
+              <button
+                class="btn btn-default btn-ghost filter-btn"
+                data-filter="PAL"
+              >
+                PAL
+              </button>
+              <button
+                class="btn btn-default btn-ghost filter-btn"
+                data-filter="NTSC-U/C"
+              >
+                NTSC-U/C
+              </button>
+              <button
+                class="btn btn-default btn-ghost filter-btn"
+                data-filter="NTSC-J"
+              >
+                NTSC-J
+              </button>
+            </div>
+
+            <div class="table-container">
+              <table id="ps2-table" class="archive-table">
+                <thead>
+                  <tr>
+                    <th>Serial No.</th>
+                    <th>Title</th>
+                    <th>Region</th>
+                    <th data-type="date">Released</th>
+                    <th>Developer</th>
+                    <th>Publisher</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>SLES-54354</td>
+                    <td>Final Fantasy XII</td>
+                    <td>PAL</td>
+                    <td>2007.02.23</td>
+                    <td>Square Enix</td>
+                    <td>Square Enix</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
         </section>
+      </main>
 
-        <!-- PlayStation 2-->
-        <section id="playstation-2">
-          <h3 class="subtitle">PlayStation 2</h3>
-          <div id="ps2-region-filter" class="btn-group">
-            <button class="btn btn-default btn-ghost filter-btn" data-filter="PAL">
-              PAL
-            </button>
-            <button class="btn btn-default btn-ghost filter-btn" data-filter="NTSC-U/C">
-              NTSC-U/C
-            </button>
-            <button class="btn btn-default btn-ghost filter-btn" data-filter="NTSC-J">
-              NTSC-J
-            </button>
-          </div>
-
-          <div class="table-container">
-            <table id="ps2-table" class="archive-table">
-              <thead>
-                <tr>
-                  <th>Serial No.</th>
-                  <th>Title</th>
-                  <th>Region</th>
-                  <th data-type="date">Released</th>
-                  <th>Developer</th>
-                  <th>Publisher</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>SLES-54354</td>
-                  <td>Final Fantasy XII</td>
-                  <td>PAL</td>
-                  <td>2007.02.23</td>
-                  <td>Square Enix</td>
-                  <td>Square Enix</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-      </section>
-    </main>
-
-    <footer style="
+      <footer
+        style="
           margin-top: 60px;
           text-align: center;
           font-size: 0.8rem;
           color: var(--secondary-color);
-        ">
-      <p>© 2026 Oliver Mitchell.</p>
-    </footer>
-  </div>
+        "
+      >
+        <p>© 2026 Oliver Mitchell.</p>
+      </footer>
+    </div>
 
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
